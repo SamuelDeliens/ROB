@@ -1,0 +1,171 @@
+html {
+    background-color: #FDFDFD;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+#topPage {
+	padding:10px 30px 0px 30px;
+	background-color: #433014;
+}
+   
+h1 {
+    color: #FDF6EC;
+    margin-top:15px;
+    padding-left: 30px;
+    padding-bottom: 5px;
+}
+   
+#tableau {
+    overflow:scroll;
+    height: 70%;
+}
+   
+#capteur {
+    border-collapse: collapse;
+    width: 100%;
+}
+   
+#capteur td, #capteur th {
+    border: 1px none #ddd;
+    padding: 8px;
+    border-collapse: collapse;
+}
+   
+#capteur #midCollumn{
+    border-left:1px solid #f2f2f2;
+    border-right:1px solid #f2f2f2;
+}
+   
+#capteur tr:nth-child(even){background-color: #F3E9DD;}
+   
+#capteur tr:hover {background-color: #DAB88B;}
+   
+#capteur th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+#divGraph {
+    box-shadow: rgba(50, 50, 93, 1) 0px 50px 100px -20px, rgba(50, 50, 50, 0.9) 0px 30px 60px -30px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    position: fixed;
+    bottom: 0px;
+    width: 90%;
+    height: 0px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-left: 40px;
+    background-color: white;
+    opacity: 1;
+}
+
+#tabGraphique {
+    width : 100%;
+}
+
+#tabGraphique tr {
+    width: 100%;
+}
+  
+#graphique {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+}
+
+#firstChart {
+    width: 100%;
+}
+
+#secondChart {
+    width: 100%;
+}
+
+#love {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#BDD {
+  padding:10px 30px 0px 30px;
+  display = block;
+}
+
+#loveDiv {
+  padding:10px 30px 0px 30px;
+  display : none;
+}
+
+#divButton {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#graphInputSize {
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+.graphButton {
+  display: inline-block;
+  flex-direction: row;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  color: #3D3D3D;
+  background: #fff;
+  border: none;
+  box-shadow: 0px 0.5px 1px rgba(50, 50, 50, 0.5);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.graphButton:hover {
+  box-shadow: 0px 1px 2px rgba(150, 150, 150, 1);
+  outline: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.crop1 {
+    background-image: url(https://i.ytimg.com/vi/vtwGk0A03CQ/maxresdefault.jpg);
+    position:absolute;
+    z-index: o;
+    clip:rect(auto,790,auto,auto);
+    background-size: cover;
+    width: 1280px;
+    height: 360px;
+    top:10px;
+    left:150px;
+}
+
+.background {
+    position: absolute;
+    z-index: -1;
+    background-color: black;
+    width: 1280px;
+    height: 720px;
+    top: 10px;
+    left: 10px;
+}
+
+.crop2 {
+    position: absolute;
+    z-index: 1;
+    clip:rect(360,auto,auto,800);
+    top: 10px;
+    left: -300px;
+}
