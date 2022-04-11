@@ -9,8 +9,8 @@ body {
 }
 
 #topPage {
-	padding:10px 30px 0px 30px;
-	background-color: #433014;
+    padding:10px 30px 0px 30px;
+    background-color: #433014;
 }
    
 h1 {
@@ -99,7 +99,7 @@ h1 {
 
 #BDD {
   padding:10px 30px 0px 30px;
-  display = block;
+  display: block;
 }
 
 #loveDiv {
