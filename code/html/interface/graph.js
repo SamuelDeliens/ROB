@@ -1,7 +1,10 @@
+//-----------------------------------------------------------------
+//------------------------ GRAPHIQUE ------------------------------
+//-----------------------------------------------------------------
+
 const pHlabel = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 const graph = {"firstChart": 0, "secondChart": 0};
 
-var capteurValues = 0;
 var graphVar = {
     0: [], //date
     1: [], //pH
@@ -9,21 +12,19 @@ var graphVar = {
     3: [], //conduct
     4: [0,0,0,0,0,0,0,0,0,0,0,0,0,0], //nb
 };
-setDefault();
 
 //Fonction globale
-function setDefault() {
+function setGraph() {
     setVar();
     setNbVar(1);
     defineGraphe("firstChart", graphVar[0], graphVar[1], {type:"line",option:{scales:{x:{title :{display:false}}}} });
     defineGraphe("secondChart", pHlabel, graphVar[4], {type: 'bar', options: {scales:{y:{beginAtZero:true}}} });
-    listener2();
 }
 
 
 //---------------Fonction initialisation-----------------
+
 function initVar() {
-    var capteurValues = 0;
     graphVar = {
         0: [], //date
         1: [], //pH
@@ -34,11 +35,11 @@ function initVar() {
 }
 
 //---------------Fonction set-------------------------
+
 function setVar() {
-    capteurValues = document.capteurValues;
-    for (var i=0; i<capteurValues.length; i++) {
+    for (var i=0; i<document.capteurValues.length; i++) {
         for(var j=0; j<4; j++) {
-            graphVar[j][i] = capteurValues[i][j+1];
+            graphVar[j][i] = document.capteurValues[i][j+1];
         }
     }
 }
@@ -51,27 +52,20 @@ function setNbVar(type) {
 }
 
 //---------------Fonction graphe-------------------------
-function listener2() {
-    var buttonSize = document.getElementById("firstChartO");
-    buttonSize.addEventListener("change", function() { changeChart("firstChart", 0, "firstChartO"); });
-    
-    var buttonLove = document.getElementById("secondChartO");
-    buttonLove.addEventListener("change", function() { changeChart("secondChart", 1, "secondChartO"); });
-}
 
 function changeChart(idChart, idName, idButton) {
     initVar();
     setVar();
-	var button = document.getElementById(idButton);
-	initChart(idChart, idName);
+    var button = document.getElementById(idButton);
+    initChart(idChart, idName);
         value = choosenValue(button.value);
-	if (idName == 0) {
-		defineGraphe(idChart, graphVar[0], graphVar[value], {type:"line",option:{scales:{x:{title :{display:false}}}}});
-	} else {
-		graphVar[4] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-		setNbVar(value);
-        	defineGraphe(idChart, pHlabel, graphVar[4], {type: 'bar', options: {scales:{y:{beginAtZero:true}}} });
-	}
+    if (idName == 0) {
+        defineGraphe(idChart, graphVar[0], graphVar[value], {type:"line",option:{scales:{x:{title :{display:false}}}}});
+    } else {
+        graphVar[4] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        setNbVar(value);
+            defineGraphe(idChart, pHlabel, graphVar[4], {type: 'bar', options: {scales:{y:{beginAtZero:true}}} });
+    }
 }
 
 function initChart(idChart, idName) {
@@ -112,5 +106,4 @@ function defineGraphe(id, label, valeur, config) {
         document.getElementById(id),
         config
     );
-    
 }
