@@ -27,7 +27,7 @@ function init() {
 function getLoop() {
     console.log("recherche");
     getValue();
-    setTimeout(function() {getLoop()}, 5000);
+    setTimeout(function() {getLoop()}, 500);
 }    
 
 //-----------------------------------------------------------------

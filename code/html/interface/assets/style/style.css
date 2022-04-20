@@ -91,6 +91,12 @@ h1 {
     width: 100%;
 }
 
+#launchPy {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+}
+
 #love {
   position: absolute;
   top: 20px;
