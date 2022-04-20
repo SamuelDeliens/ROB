@@ -9,11 +9,14 @@ function listener() {
     var buttonLove = document.getElementById("love");
     buttonLove.addEventListener("click", function() {controlerDiv()});
     
-    var buttonSize = document.getElementById("firstChartO");
-    buttonSize.addEventListener("change", function() { changeChart("firstChart", 0, "firstChartO"); });
+    var buttonLaunch = document.getElementById("launchPy");
+    buttonLaunch.addEventListener("click", function() {launchPy()});
     
-    var buttonLove = document.getElementById("secondChartO");
-    buttonLove.addEventListener("change", function() { changeChart("secondChart", 1, "secondChartO"); });
+    var firstChart = document.getElementById("firstChartO");
+    firstChart.addEventListener("change", function() { changeChart("firstChart", 0, "firstChartO"); });
+    
+    var secondChart = document.getElementById("secondChartO");
+    secondChart.addEventListener("change", function() { changeChart("secondChart", 1, "secondChartO"); });
 }
 
 //-----------------Graph------------------
