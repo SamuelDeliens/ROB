@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Table - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Nunito.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/requete.js"></script>
+    <script src="assets/js/donnees.js"></script>
+    <script src="assets/js/table/tableControler.js"></script>
+    <script src="assets/js/controler.js"></script>
 </head>
 
 <body id="page-top">
@@ -64,16 +69,28 @@
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-6 text-nowrap">
-                                    <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable"><label class="form-label">Show&nbsp;<select class="d-inline-block form-select form-select-sm">
+                                <div class="col-md-8 text-nowrap">
+                                    <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable"><label class="form-label">Show&nbsp;<select class="d-inline-block form-select form-select-sm" id="showNumber">
                                                 <option value="10" selected="">10</option>
                                                 <option value="25">25</option>
                                                 <option value="50">50</option>
                                                 <option value="100">100</option>
                                             </select>&nbsp;</label></div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="text-md-end dataTables_filter" id="dataTable_filter"><label class="form-label"><input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Search"></label></div>
+                                <div class="col-md-2">
+                                    <div id="dataTable_filter_Name" class="dataTables_filter" aria-controls="dataTable">
+                                        <select class="d-inline-block form-select form-select-sm" id="filterName">
+                                            <option value="id">id</option>
+                                            <option value="date" selected="">date</option>
+                                            <option value="pH">pH</option>
+                                            <option value="oxygen">oxygen</option>
+                                            <option value="conductivity">conductivity</option>
+                                            <option value="turbidity">turbidity</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="text-md-end dataTables_filter" id="dataTable_filter_Value"><label class="form-label"><input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Search" id="filterValue"></label></div>
                                 </div>
                             </div>
                             <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
@@ -88,15 +105,7 @@
                                             <th>turbi</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>33</td>
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
-                                        </tr>
+                                    <tbody id="capteurDonnee">
                                     </tbody>
                                     <tfoot>
                                         <tr>
@@ -117,11 +126,11 @@
                                 <div class="col-md-6">
                                     <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
                                         <ul class="pagination">
-                                            <li class="page-item disabled"><a class="page-link" aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
-                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item"><a class="page-link" aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+                                            <li class="page-item" value=""><a class="page-link posButton" aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+                                            <li class="page-item"><a class="page-link posButton" href="#">0</a></li>
+                                            <li class="page-item active"><a class="page-link posButton" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link posButton" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link posButton" aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -132,9 +141,10 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/table/script.js"></script>
 </body>
 
 </html>
