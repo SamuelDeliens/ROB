@@ -9,6 +9,7 @@ import datetime
 import pymysql.cursors
 
 from BDD import BDD
+from FileControler import FileControler
 
 class Client:
     
@@ -17,6 +18,7 @@ class Client:
         self.PORT= 6780
         self.client=''
         self.BDD= BDD()
+        self.fileControler = FileControler()
 
 
 #------------------------ Config ------------------------
@@ -30,6 +32,7 @@ class Client:
 #----------------------- String -> Tab ------------------
 
     def convert(self, string):
+        print(string)
         string = string[:-1]
         string = string[1:]
         tab = string.split(',')
@@ -69,14 +72,14 @@ class Client:
         self.sendMsg('stop')
     
     def getRT(self):
-        nb = 2
-        i=0
-        while i<nb :
+        status = self.fileControler.readFile()
+        while status == "continu" :
+            donnees = self.receive()
             donnees = self.receive()
             time.sleep(0.5) #delay insertion pour Interface
             self.BDD.inssertBDD(donnees)
-            i=i+1
-            if(i<nb):
+            status = self.fileControler.readFile()
+            if(status == "continu"):
                 self.sendMsg('continu')
         self.sendMsg('stop')
         

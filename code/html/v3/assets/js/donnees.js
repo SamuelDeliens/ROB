@@ -24,8 +24,17 @@ function setTab(offset, show) {
     for(i=offset; i<(offset+show); i++) {
         if (document.capteurValues[i]) {
             let tr = document.createElement('tr');
+<<<<<<< HEAD
+            let icon = document.createElement('i');
+            icon.classList.add("fas");
+            icon.classList.add("fa-times");
+            tr.appendChild(icon);
+            tr.value=i;
+            for (var j=0; j<=5;j++) {
+=======
             tr.value=i;
             for (var j=0; j<=4;j++) {
+>>>>>>> 60a210487000a1330e36e2510a31655e59970c25
                 let td = document.createElement('td');
                 td.innerHTML = document.capteurValues[i][j];
                 tr.appendChild(td);

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Video</title>
+    </head>
+    <body>
+        <img id="videoStream">  
+        <button onclick="location.reload()">Reload</button>
+    </body>
+</html>
+
+<script>
+    
+    function refresh() {
+        console.log("refresh");
+        img = document.getElementById("videoStream");
+        img.src="Data/Video/videoStream"+i+".jpg";
+        i++;
+        console.log(i);
+        if(i>=10000) {
+            console.log("newStart");
+            i=0;
+        }
+        setTimeout(function() {refresh()}, 150);
+    }
+    
+    i=0;
+    setTimeout(function() {refresh()}, 10);
+</script>

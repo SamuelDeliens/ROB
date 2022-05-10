@@ -1,0 +1,27 @@
+#capteurDonnee tr:hover {
+    background: var(--bs-gray-800);
+    color: var(--bs-warning);
+    font-weight: bold;
+}
+
+#capteurDonnee tr td:hover {
+    font-size: large;
+    font-weight: bolder;
+}
+
+#capteurDonnee td:nth-child(1n+4) {
+    text-align: center;
+}
+
+#capteurDonnee tr i {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+#capteurDonnee tr i:hover {
+    color: var(--bs-danger);
+}
+
+#capteurDonnee tr i:hover ~ td {
+    color: var(--bs-danger);
+}
