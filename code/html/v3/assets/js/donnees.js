@@ -19,22 +19,25 @@ function setTabRT() {
     }
 }
 
-function setTab(offset, show) {
+function setTab(admin, offset, show) {
+    console.log(admin);
+    console.log(offset);
+    console.log(show);
     var tbody = document.getElementById("capteurDonnee");
     for(i=offset; i<(offset+show); i++) {
         if (document.capteurValues[i]) {
             let tr = document.createElement('tr');
-<<<<<<< HEAD
-            let icon = document.createElement('i');
-            icon.classList.add("fas");
-            icon.classList.add("fa-times");
-            tr.appendChild(icon);
+            if(admin) {
+                let icon = document.createElement('i');
+                icon.classList.add("fas");
+                icon.classList.add("fa-times");
+                tr.appendChild(icon); 
+            } else {
+                let td = document.createElement('td');
+                tr.appendChild(td); 
+            }
             tr.value=i;
             for (var j=0; j<=5;j++) {
-=======
-            tr.value=i;
-            for (var j=0; j<=4;j++) {
->>>>>>> 60a210487000a1330e36e2510a31655e59970c25
                 let td = document.createElement('td');
                 td.innerHTML = document.capteurValues[i][j];
                 tr.appendChild(td);
@@ -47,7 +50,7 @@ function setTab(offset, show) {
 function refreshTab(offset, show) {
     console.log("refresh");
     initTab();
-    setTab(offset, show);
+    setTab(false, offset, show);
 }
 
 //-----------------------------------------------------------------
@@ -62,6 +65,8 @@ function changeTab() {
     var tbody = document.getElementById("capteurDonnee");
     tbody.removeChild(tbody.lastChild);
     let tr = document.createElement('tr');
+    let td = document.createElement('td');
+    tr.appendChild(td); 
     for (var j=0; j<=4;j++) {
         let td = document.createElement('td');
         td.innerHTML = document.lastCaptureValues[j];

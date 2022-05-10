@@ -15,14 +15,17 @@ function getValue() {
     httpRequest.onload = function() {
         if(httpRequest.readyState == 4 && httpRequest.status == 200) {
             console.log(httpRequest.response);
-            //document.capteurValues = httpRequest.response;
-            //document.lastCaptureValues = document.capteurValues[0];
-            document.backupValues = [];
+            document.capteurValues = httpRequest.response;
+            document.lastCaptureValues = document.capteurValues[0];
+            document.backupValues = document.capteurValues;
+            
+            /*document.backupValues = [];
             for (i=1; i<=200; i++) {
                 document.backupValues.unshift({0:i, 1:"13/12/07 18:19:11", 2:7.1, 3: 1.2, 4: 3.1, 5: null, id:i, date:"13/12/07 18:19:11", pH:7.1, oxygen: 1.2, conductivity: 3.1, turbidifty: null});
             }
             document.lastCaptureValues = document.backupValues[0];
             document.capteurValues = document.backupValues;
+            */
             checkValue();
         }
         
@@ -39,8 +42,8 @@ function getLastValue() {
     httpRequest2.send();
     httpRequest2.onload = function() {
         if(httpRequest2.readyState == 4 && httpRequest2.status == 200) {
-            //document.newLastCapteurValues = httpRequest2.response[0];
-            document.newLastCapteurValues = {0:"201", 1:"13/12/07 18:19:11", 2:7.1, 3: 1.2, 4: 3.1, 5: null, id:"1", date:"13/12/07 18:19:11", pH:7.1, oxygen: 1.2, conductivity: 3.1, turbidifty: null};
+            document.newLastCapteurValues = httpRequest2.response[0];
+            //document.newLastCapteurValues = {0:"201", 1:"13/12/07 18:19:11", 2:7.1, 3: 1.2, 4: 3.1, 5: null, id:"1", date:"13/12/07 18:19:11", pH:7.1, oxygen: 1.2, conductivity: 3.1, turbidifty: null};
             checkChange();
         }
         

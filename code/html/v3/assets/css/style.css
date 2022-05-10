@@ -5,7 +5,7 @@
 }
 
 #capteurDonnee tr td:hover {
-    font-size: large;
+    font-size: 16px;
     font-weight: bolder;
 }
 
