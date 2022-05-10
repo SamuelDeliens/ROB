@@ -5,7 +5,7 @@
 import sys
 import socket
 
-sys.path.append("/var/www/html/interface/python")
+sys.path.append("/var/www/html/assets/python")
 print(sys.path)
 
 from Client import Client

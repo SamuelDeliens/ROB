@@ -32,7 +32,7 @@
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
         </nav>
-        <div class="d-flex flex-column" id="content-wrapper">
+        <div class="d-flex flex-column" id="content-wrapper"> 
             <div id="content">
                 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
                     <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
@@ -51,7 +51,11 @@
                             </li>
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
-                                <h6><span class="d-none d-lg-inline me-2 text-gray-600 small">Jiji &amp; Jiji <3 Samsam</span><img class="border rounded-circle img-profile" src="assets/img/ROV.png" style="max-width: 35px;"></h6>
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Jiji <3 Samsam</span><img class="border rounded-circle img-profile" src="assets/img/ROV.png"></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity log</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -62,10 +66,10 @@
                         <div class="card-header py-3">
                             <div class="row">
                                 <div class="col align-self-center">
-                                    <p class="text-primary m-0 fw-bold">Données</p>
+                                    <p class="text-primary m-0 fw-bold">Données Temps Réel</p>
                                 </div>
-                                <div class="col text-end align-self-center"><button class="btn btn-primary" type="button" id="GETDATA">GETDATA</button></div>
-                                <div class="col text-end align-self-center"><button class="btn btn-primary" type="button" id="GETRT">GETRT</button></div>
+                                <div class="col-2 text-end align-self-center"><button class="btn btn-primary" type="button" id="GETDATA">GETDATA</button></div>
+                                <div class="col-2 text-start align-self-center"><button class="btn btn-primary" type="button" id="GETRT">GETRT</button></div>
                             </div>
                         </div>
                         <div class="card-body" style="padding-left: 30px;padding-right: 30px;">
@@ -95,7 +99,7 @@
                                 <div class="col align-self-center">
                                     <p class="text-primary m-0 fw-bold">Données</p>
                                 </div>
-                                <div class="col text-end align-self-center"><button class="btn btn-primary" type="button" id="Refresh">Refresh</button></div>
+                                <div class="col-2 text-start align-self-center"><button class="btn btn-primary" type="button" id="Refresh">Refresh</button></div>
                             </div>
                         </div>
                         <div class="card-body">

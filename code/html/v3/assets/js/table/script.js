@@ -6,7 +6,7 @@
 function checkValue() {
     if(document.capteurValues) {
         console.log("init");
-        setTab(document.tableOffset, document.tableShowNb);
+        setTab(true, document.tableOffset, document.tableShowNb);
         setDisplayTable();
     }
 }
