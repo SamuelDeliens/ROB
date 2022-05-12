@@ -83,11 +83,19 @@ class Client:
                 self.sendMsg('continu')
         self.sendMsg('stop')
         
+    def calibrate(self):
+        isCalibrate = self.client.recv(1024).decode()
+        print(isCalibrate)
+        
+        
     def controler(self, message):
         if(message == "GETDATA"):
             self.getData()
         elif(message == "GETRT"):
             self.getRT()
+        elif("CALIBRATE" in message):
+            self.calibrate()
+            
 
     def execute(self, message):
         self.connection()
@@ -95,7 +103,6 @@ class Client:
         self.controler(message)
         self.deconnection()
         print("end")
-        
         
         
 #-------------------appel fonction --------------

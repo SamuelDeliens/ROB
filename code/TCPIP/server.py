@@ -47,11 +47,31 @@ class Server:
         if (n != len(message)):
             return 'ERROR'
 
+
+# --------------------- Calibrate -----------------------
+    
+    def calibrate(self, command):
+        if (command[0]== 0):
+            isCalibrate = self.sensor.calibratePH(command[1])
+        elif (command[0]== 1):
+            isCalibrate = self.sensor.calibrateOxygen(command[1])
+        elif (command[0]== 2):
+            isCalibrate = self.sensor.calibrateConductivity(command[1])
+        return isCalibrate
+
+
 # --------------------- Controler -----------------------
     
     def controlerCommand(self, command):
         if (command == "GETDATA" or command == "GETRT" or command == "continu"):
             action = True
+        elif (command == "stop"):
+            action = False
+        elif ("CALIBRATE" in command):
+            command = [int(command.split()[1]), int(command.split()[2])]
+            isCalibrate = self.calibrate(command)
+            self.sending(str.encode(isCalibrate))
+            action = False
         else:
             message = str.encode("ERREUR")
             #sending = sending(message)
