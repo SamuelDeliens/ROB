@@ -84,7 +84,8 @@ class Client:
         self.sendMsg('stop')
         
     def calibrate(self):
-        isCalibrate = self.receive()
+        isCalibrate = self.client.recv(1024).decode()
+        print(isCalibrate)
         
         
     def controler(self, message):
@@ -93,7 +94,7 @@ class Client:
         elif(message == "GETRT"):
             self.getRT()
         elif("CALIBRATE" in message):
-            self.calibrate(message)
+            self.calibrate()
             
 
     def execute(self, message):
