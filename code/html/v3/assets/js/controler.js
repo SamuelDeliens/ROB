@@ -6,9 +6,21 @@ function listener(page) {
     var buttonLove = document.getElementById("love");
     if(buttonLove) {buttonLove.addEventListener("click", function() {controlerDiv()}); }
 
+    var buttonCalibrateType = document.getElementsByClassName("calibrationType");
+    if(buttonCalibrateType) {
+        let i = 0;
+        for(let buttonX of buttonCalibrateType) {
+            buttonX.value = i;
+            buttonX.addEventListener("click", function() {controlerPythonCALIB(buttonX.value)});
+        }
+    }
+
+    var buttonCalibrate = document.getElementById("calibrateButton");
+    if(buttonCalibrate) {buttonCalibrate.addEventListener("click", function() {startCalibration()}); }
+
     if (page == "RealTime") {     
         var buttonLaunch = document.getElementById("GETRT");
-        buttonLaunch.addEventListener("click", function() {controlerPython()});
+        buttonLaunch.addEventListener("click", function() {controlerPythonRT()});
 
         var buttonLaunchOnce = document.getElementById("GETDATA");
         buttonLaunchOnce.addEventListener("click", function() {launchPy("GETDATA")});
@@ -54,7 +66,7 @@ function controlerDiv() {
     }
 }
 
-function controlerPython() {
+function controlerPythonRT() {
     button = document.getElementById("GETRT");
     if(button.innerHTML == "GETRT") {
         button.innerHTML = "stop"
@@ -63,4 +75,11 @@ function controlerPython() {
         button.innerHTML = "GETRT";
         launchPy("GETRT", "stop");
     }
+}
+
+function controlerPythonCALIB(pinSensor) {
+    document.pinSensor = pinSensor;
+    if(document.stepCALIB == undefined) {document.stepCALIB = 0}
+    if(document.isLaunch == undefined) {document.isLaunch = false}
+    displayCalibration(document.stepCALIB);
 }
