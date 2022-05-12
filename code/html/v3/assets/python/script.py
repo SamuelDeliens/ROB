@@ -15,6 +15,7 @@ from FileControler import FileControler
 
 type_ = sys.argv[1]
 action_ = sys.argv[2]
+step_ = sys.argv[3]
 
 client = Client()
 fileControler = FileControler()
@@ -34,6 +35,9 @@ def controler():
             client.execute("GETRT")
         elif(action_ == "stop"):
             fileControler.writeFile("stop")
+    elif(type_ == "CALIBRATE"):
+        client.execute("CALIBRATE "+ action_ +" "+ step_)
+        
 
 # --------------------- SCRIPT -------------------------
 

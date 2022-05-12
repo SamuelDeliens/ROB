@@ -20,9 +20,6 @@ function setTabRT() {
 }
 
 function setTab(admin, offset, show) {
-    console.log(admin);
-    console.log(offset);
-    console.log(show);
     var tbody = document.getElementById("capteurDonnee");
     for(i=offset; i<(offset+show); i++) {
         if (document.capteurValues[i]) {
