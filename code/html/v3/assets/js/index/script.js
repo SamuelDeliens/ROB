@@ -16,7 +16,7 @@ function checkValue() {
     if(document.capteurValues) {
         console.log("init");
         initTab();
-        setTab(false, 0, 10);
+        setTab(0, 10);
         setTabRT();
     }
 }
@@ -24,6 +24,8 @@ function checkValue() {
 //--------------------------- init --------------------------------
 
 function init() {
+    checkPrivileges();
+    role_display("RealTime");
     listener("RealTime");
     getValue();
 }

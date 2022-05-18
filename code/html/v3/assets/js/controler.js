@@ -4,6 +4,7 @@
 
 function listener(page) {
     var buttonLove = document.getElementById("love");
+    console.log(buttonLove);
     if(buttonLove) {buttonLove.addEventListener("click", function() {controlerDiv()}); }
 
     var buttonCalibrateType = document.getElementsByClassName("calibrationType");
@@ -18,12 +19,14 @@ function listener(page) {
     var buttonCalibrate = document.getElementById("calibrateButton");
     if(buttonCalibrate) {buttonCalibrate.addEventListener("click", function() {startCalibration()}); }
 
-    if (page == "RealTime") {     
-        var buttonLaunch = document.getElementById("GETRT");
-        buttonLaunch.addEventListener("click", function() {controlerPythonRT()});
-
-        var buttonLaunchOnce = document.getElementById("GETDATA");
-        buttonLaunchOnce.addEventListener("click", function() {launchPy("GETDATA")});
+    if (page == "RealTime") {
+        if (document.right) {
+            var buttonLaunch = document.getElementById("GETRT");
+            buttonLaunch.addEventListener("click", function() {controlerPythonRT()});
+    
+            var buttonLaunchOnce = document.getElementById("GETDATA");
+            buttonLaunchOnce.addEventListener("click", function() {launchPy("GETDATA")});
+        }
 
         var buttonRefresh = document.getElementById("Refresh");
         buttonRefresh.addEventListener("click", function() {refreshTab(0, 10)});
@@ -50,19 +53,38 @@ function listener(page) {
         var secondChart = document.getElementById("secondChartO");
         secondChart.addEventListener("change", function() { changeChart("secondChart", 1, "secondChartO"); });
     }
+
+    else if (page == "Camera") {
+        if (document.right) {
+            var buttonCameraServoDirect = document.getElementsByClassName("buttonCameraServoDirect");
+            if(buttonCameraServoDirect) {
+                for (let buttonX of buttonCameraServoDirect) {
+                    buttonX.addEventListener("click", function() { controlCameraServo("direct", buttonX.value); });
+                }
+            }
+            var buttonCameraServoSlow = document.getElementsByClassName("buttonCameraServoSlow");
+            if(buttonCameraServoSlow) {
+                for (let buttonX of buttonCameraServoSlow) {
+                    buttonX.addEventListener("mousedown", function() { controlCameraServo("slow", buttonX.value); });
+                    buttonX.addEventListener("mouseup", function() { controlCameraServo("stop",  buttonX.value); });
+                }
+            }
+        }
+    }
 }
 
 //-----------------Page------------------
 
 function controlerDiv() {
-    var div1 = document.getElementById("BDD");
+    var div1 = document.getElementById("content");
+    console.log(div1);
     var div2 = document.getElementById("loveDiv");
     if (div1.style.display == "none") {
-        div1.style.display = "block";
+        div1.style.display = "";
         div2.style.display = "none";
     } else {
         div1.style.display = "none";
-        div2.style.display = "block";
+        div2.style.display = "";
     }
 }
 
