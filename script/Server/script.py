@@ -2,21 +2,16 @@
 # ---------------------- Script-------------------------
 # ------------------------------------------------------
 
-from Sensor import Sensor
 from Server import Server
-
-average = 100.0
+from FileControler import FileControler
+from Actioner import Actioner
 
 adress = ''
 port = 6780
 
 server = Server()
 
-# --------------------- Config -------------------------
-
-server.configServer(adress, port)
-server.sensor.configSensor(average)
-
 # --------------------- SCRIPT -------------------------
 
+server.configServer(adress, port)
 server.connection()
