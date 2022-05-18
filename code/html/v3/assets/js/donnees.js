@@ -19,12 +19,12 @@ function setTabRT() {
     }
 }
 
-function setTab(admin, offset, show) {
+function setTab(offset, show) {
     var tbody = document.getElementById("capteurDonnee");
     for(i=offset; i<(offset+show); i++) {
         if (document.capteurValues[i]) {
             let tr = document.createElement('tr');
-            if(admin) {
+            if(document.right) {
                 let icon = document.createElement('i');
                 icon.classList.add("fas");
                 icon.classList.add("fa-times");
@@ -47,7 +47,7 @@ function setTab(admin, offset, show) {
 function refreshTab(offset, show) {
     console.log("refresh");
     initTab();
-    setTab(false, offset, show);
+    setTab(offset, show);
 }
 
 //-----------------------------------------------------------------

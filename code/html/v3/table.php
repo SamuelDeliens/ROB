@@ -1,3 +1,11 @@
+<?php
+    error_reporting(E_ALL);
+    ini_set("display_errors", 1);
+    require 'assets/php/login/login.php';
+    connection_auto();
+    connection_manual();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -12,38 +20,95 @@
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/bootstrap/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/role/roles.js"></script>
+    <script src="assets/js/role/roles_display.js"></script>
     <script src="assets/js/requete.js"></script>
     <script src="assets/js/settings.js"></script>
-    <script src="assets/js/controler.js"></script>
     <script src="assets/js/donnees.js"></script>
+    <script src="assets/js/table/tableControler.js"></script>
+    <script src="assets/js/controler.js"></script>
 </head>
 
 <body id="page-top">
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-heart jello animated" data-bss-hover-animate="jello"></i></div>
-                    <div class="sidebar-brand-text mx-3"><span>mWL</span></div>
-                </a>
+                <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-heart jello animated"></i></div>
+                <div class="sidebar-brand-text mx-3"><span>mWL</span></div>
+            </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fa fa-feed"></i><span>Real Time</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="table.html"><i class="fas fa-table"></i><span>Donnee</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="stat.html"><i class="fas fa-tachometer-alt"></i><span>Statistique</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php"><i class="fa fa-feed"></i><span>Real Time</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="table.php"><i class="fas fa-table"></i><span>Donnee</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="stat.php"><i class="fas fa-tachometer-alt"></i><span>Statistique</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="camera.php"><i class="fas fa-camera-retro"></i><span>Camera</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" data-bss-hover-animate="pulse" id="sidebarToggle" type="button"></button></div>
             </div>
         </nav>
-        <div class="d-flex flex-column" id="content-wrapper"> 
+        <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
                     <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
-                        <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <form class="d-none d-sm-inline-block ms-md-3 my-2 my-md-0 mw-100 navbar-search" style="margin-right: 20px;">
                             <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ..."><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
                         </form>
+                        <div>
+                            <svg style="margin: auto;" width="50px" height="50px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+
+                                <g>
+                                  <animateTransform attributeName="transform" type="rotate" values="360 50 50;0 50 50" keyTimes="0;1" dur="1.7543859649122806s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1" begin="-0.17543859649122806s"></animateTransform>
+                                  <circle cx="50" cy="50" r="39.891" stroke="#ffc254" stroke-width="14.4" fill="none" stroke-dasharray="0 300">
+                                    <animate attributeName="stroke-dasharray" values="15 300;55.1413599195142 300;15 300" keyTimes="0;0.5;1" dur="1.7543859649122806s" repeatCount="indefinite" calcMode="linear" keySplines="0 0.4 0.6 1;0.4 0 1 0.6" begin="-0.0807017543859649s"></animate>
+                                  </circle>
+                                  <circle cx="50" cy="50" r="39.891" stroke="#fff1cf" stroke-width="7.2" fill="none" stroke-dasharray="0 300">
+                                    <animate attributeName="stroke-dasharray" values="15 300;55.1413599195142 300;15 300" keyTimes="0;0.5;1" dur="1.7543859649122806s" repeatCount="indefinite" calcMode="linear" keySplines="0 0.4 0.6 1;0.4 0 1 0.6" begin="-0.0807017543859649s"></animate>
+                                  </circle>
+                                  <circle cx="50" cy="50" r="32.771" stroke="#000000" stroke-width="1" fill="none" stroke-dasharray="0 300">
+                                    <animate attributeName="stroke-dasharray" values="15 300;45.299378454348094 300;15 300" keyTimes="0;0.5;1" dur="1.7543859649122806s" repeatCount="indefinite" calcMode="linear" keySplines="0 0.4 0.6 1;0.4 0 1 0.6" begin="-0.0807017543859649s"></animate>
+                                  </circle>
+                                  <circle cx="50" cy="50" r="47.171" stroke="#000000" stroke-width="1" fill="none" stroke-dasharray="0 300">
+                                    <animate attributeName="stroke-dasharray" values="15 300;66.03388996804073 300;15 300" keyTimes="0;0.5;1" dur="1.7543859649122806s" repeatCount="indefinite" calcMode="linear" keySplines="0 0.4 0.6 1;0.4 0 1 0.6" begin="-0.0807017543859649s"></animate>
+                                  </circle>
+                                </g>
+                                <g>
+                                  <animateTransform attributeName="transform" type="rotate" values="360 50 50;0 50 50" keyTimes="0;1" dur="1.7543859649122806s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1"></animateTransform>
+                                
+                                  <path fill="#ffc254" stroke="#000000" d="M97.2,50c0,6.1-1.2,12.2-3.5,17.8l-13.3-5.4c1.6-3.9,2.4-8.2,2.4-12.4"></path>
+                                  <path fill="#fff1cf" transform="translate(0,-0.1)" d="M93.6,50c0,1.2,0,2.4-0.1,3.6L93,57.2c-0.4,2-2.3,3.3-4.2,2.8l-0.2-0.1c-1.8-0.5-3.1-2.3-2.7-3.9l0.4-3 c0.1-1,0.1-2,0.1-3"></path>
+                                  <path fill="#ffc254" stroke="#000000" d="M85.4,62.5c-0.2,0.7-0.5,1.4-0.8,2.1c-0.3,0.7-0.6,1.4-0.9,2c-0.6,1.1-2,1.4-3.2,0.8v0c-1.1-0.7-1.7-2-1.2-2.9 c0.3-0.6,0.5-1.2,0.8-1.8c0.2-0.6,0.6-1.2,0.7-1.8"></path>
+                                  <path fill="#ffc254" stroke="#000000" d="M94.5,65.7c-0.3,0.9-0.7,1.7-1,2.6c-0.4,0.8-0.7,1.7-1.1,2.5c-0.7,1.4-2.3,1.9-3.4,1.3l0,0 c-1.1-0.7-1.5-2.2-0.9-3.4c0.4-0.8,0.7-1.5,1-2.3c0.3-0.8,0.7-1.5,0.9-2.3"></path>
+                                  <path fill="#ffc254" stroke="#000000" d="M85.6,67c0,0.8,0.1,1.6,0.3,2.4c0.6-0.5,1.1-1,1.4-1.7c0.2-0.7,0.2-1.5-0.1-2.2C86.5,64,85.6,66.3,85.6,67z"></path>
+                                
+                                </g>
+                                <g>
+                                  <animateTransform attributeName="transform" type="rotate" values="360 50 50;0 50 50" keyTimes="0;1" dur="1.7543859649122806s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1" begin="-0.17543859649122806s"></animateTransform>
+                                
+                                  <path fill="#fff1cf" stroke="#000000" d="M91,33.6l-10,4c-0.4-1.2-1.1-2.4-1.7-3.5c-0.2-0.5,0.3-1.1,0.9-1C83.6,32.9,87.4,32.9,91,33.6z"></path>
+                                  <path fill="#fff1cf" stroke="#000000" d="M83.2,36.7l10-4c-0.6-1.7-1.5-3.3-2.3-4.9c-0.3-0.7-1.2-0.6-1.4,0.1C87.6,31.1,85.7,34,83.2,36.7z"></path>
+                                  <path fill="#ffc254" stroke="#000000" transform="translate(0,0.2)" d="M82.8,50c0-3.4-0.5-6.8-1.5-10c-0.2-0.8-0.4-1.5-0.3-2.3c0.1-0.8,0.4-1.6,0.7-2.4c0.7-1.5,1.9-3.1,3.7-4l0,0 c1.8-0.9,3.7-1,5.6-0.3c0.9,0.4,1.7,1,2.4,1.8c0.7,0.8,1.3,1.7,1.7,2.8c1.5,4.6,2.2,9.5,2.2,14.4"></path>
+                                  <path fill="#fff1cf" transform="translate(0,0.3)" d="M86.4,50l0-0.9l-0.1-0.9l-0.1-1.9c0-0.9,0.2-1.7,0.7-2.3c0.5-0.7,1.3-1.2,2.3-1.4l0.3,0c0.9-0.2,1.9,0,2.6,0.6 c0.7,0.5,1.3,1.4,1.4,2.4l0.2,2.2l0.1,1.1l0,1.1"></path>
+                                  <path fill="#000000" d="M88.6,36.6c0.1,0.3-0.2,0.7-0.6,0.8c-0.5,0.2-0.9,0-1.1-0.3c-0.1-0.3,0.2-0.7,0.6-0.8C88,36.1,88.5,36.2,88.6,36.6z"></path>
+                                  <path fill="none" stroke="#000000" d="M86,38.7c0.2,0.6,0.8,0.9,1.4,0.7c0.6-0.2,0.9-0.9,0.6-2.1c0.3,1.2,1,1.7,1.6,1.5c0.6-0.2,0.9-0.8,0.8-1.4"></path>
+                                  <path fill="#ffc254" stroke="#000000" d="M86.8,42.2l0.4,2.2c0.1,0.4,0.1,0.7,0.2,1.1l0.1,1.1c0.1,1.2-0.9,2.3-2.2,2.3h0c-1.3,0-2.5-0.8-2.5-1.9l-0.1-1 c0-0.3-0.1-0.6-0.2-1l-0.3-1.9"></path>
+                                  <path fill="#ffc254" stroke="#000000" d="M96.2,40.2l0.5,2.7c0.1,0.5,0.2,0.9,0.2,1.4l0.1,1.4c0.1,1.5-0.9,2.8-2.2,2.8c-1.3,0-2.5-1.1-2.6-2.4l-0.1-1.2 c0-0.4-0.1-0.8-0.2-1.2l-0.4-2.5"></path>
+                                  <path fill="none" stroke="#000000" d="M90.9,36.4c1.1-1.1,2.7-1.6,4.3-1.9"></path>
+                                  <path fill="none" stroke="#000000" d="M91.6,37.5c1.3-0.5,2.8-0.8,4.2-0.7"></path>
+                                  <path fill="none" stroke="#000000" d="M91.7,38.8c0.2-0.1,0.4-0.1,0.7-0.1c1.2-0.1,2.5,0,3.8,0.3"></path>
+                                  <path fill="none" stroke="#000000" d="M85,38.4c-1.6-0.1-3.1,0.6-4.6,1.2"></path>
+                                  <path fill="none" stroke="#000000" d="M85,39.5c-1.4,0.3-2.8,0.9-4,1.6"></path>
+                                  <path fill="none" stroke="#000000" d="M85.5,40.4c-0.2,0-0.4,0.1-0.7,0.2c-1.1,0.5-2.2,1.1-3.2,1.8"></path>
+                                  <path fill="#ff7bac" d="M92.8,34.2c0.1,0.3-0.3,0.8-0.9,1c-0.6,0.2-1.2,0.1-1.4-0.2c-0.1-0.3,0.3-0.8,0.9-1 C92.1,33.8,92.7,33.9,92.8,34.2z"></path>
+                                  <path fill="#ff7bac" d="M82.2,38.2c0.1,0.3,0.7,0.3,1.3,0.1c0.6-0.2,1-0.6,0.9-0.9c-0.1-0.3-0.7-0.3-1.3-0.1 C82.5,37.5,82,37.9,82.2,38.2z"></path>
+                                  <path fill="#000000" d="M90,35.7L89.3,36l-0.3-0.7c-0.3-0.9,0.1-1.9,0.9-2.3l0.7-0.3l0.3,0.7C91.3,34.4,90.9,35.4,90,35.7z"></path>
+                                  <path fill="#000000" d="M85.3,37.4l0.7-0.2l-0.2-0.6c-0.3-0.8-1.3-1.2-2.1-0.8L82.9,36l0.2,0.6C83.5,37.4,84.4,37.7,85.3,37.4z"></path>
+                                
+                                </g>
+                                </svg>
+                        </div>
                         <ul class="navbar-nav flex-nowrap ms-auto">
-                            <li class="nav-item dropdown show d-sm-none no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="true" data-bs-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>
-                                <div class="dropdown-menu show dropdown-menu-end p-3 animated--grow-in" aria-labelledby="searchDropdown">
+                            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>
+                                <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in" aria-labelledby="searchDropdown">
                                     <form class="me-auto navbar-search w-100">
                                         <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
                                             <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
@@ -54,8 +119,13 @@
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
                                 <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Jiji <3 Samsam</span><img class="border rounded-circle img-profile" data-bss-hover-animate="rubberBand" src="assets/img/ROV.png"></a>
-                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#" data-bs-target="#Settings" data-bs-toggle="modal"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity log</a>
-                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in">
+                                        <a class="dropdown-item account_param" href="#"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a>
+                                        <a class="dropdown-item account_param" href="#" data-bs-target="#Settings" data-bs-toggle="modal"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a>
+                                        <a class="dropdown-item account_param" href="#"><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity log</a>
+                                        <div class="dropdown-divider account_param"></div>
+                                        <a class="dropdown-item account_param" href="assets/php/login/logout.php"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+                                        <a class="dropdown-item account_param" href="#" data-bs-target="#Login" data-bs-toggle="modal"><i class="fas fa-sign-in-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Login</a>
                                     </div>
                                 </div>
                             </li>
@@ -63,49 +133,38 @@
                     </div>
                 </nav>
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4">Capteur</h3>
-                    <div class="card shadow" style="margin-bottom: 30px;">
-                        <div class="card-header py-3">
-                            <div class="row">
-                                <div class="col align-self-center">
-                                    <p class="text-primary m-0 fw-bold">Données Temps Réel</p>
-                                </div>
-                                <div class="col-2 text-end align-self-center"><button class="btn btn-primary" type="button" id="GETDATA">GETDATA</button></div>
-                                <div class="col-2 text-start align-self-center"><button class="btn btn-primary" type="button" id="GETRT">GETRT</button></div>
-                            </div>
-                        </div>
-                        <div class="card-body" style="padding-left: 30px;padding-right: 30px;">
-                            <div class="row" id="dataTable" style="background: var(--bs-gray-900);border-radius: 35px;" data-bss-hover-animate="pulse">
-                                <div class="col-3" style="padding: 12px;border-right: 1px solid var(--bs-white) ;border-left: 1px none var(--bs-white) ;">
-                                    <h4 class="text-center tabRT" style="font-weight: bold;color: var(--bs-yellow);">Get your first</h4>
-                                    <h6 class="text-center">date</h6>
-                                </div>
-                                <div class="col-3" style="padding: 12px;border-right: 1px solid var(--bs-white) ;border-left: 1px solid var(--bs-white) ;">
-                                    <h4 class="text-center tabRT" style="font-weight: bold;color: var(--bs-yellow);">data by clicking</h4>
-                                    <h6 class="text-center">pH</h6>
-                                </div>
-                                <div class="col-3" style="padding: 12px;border-right: 1px solid var(--bs-white) ;border-left: 1px solid var(--bs-white) ;">
-                                    <h4 class="text-center tabRT" style="font-weight: bold;color: var(--bs-yellow);">on one of</h4>
-                                    <h6 class="text-center">oxygen</h6>
-                                </div>
-                                <div class="col-3" style="padding: 12px;border-right: 1px none var(--bs-white) ;border-left: 1px solid var(--bs-white) ;">
-                                    <h4 class="text-center tabRT" style="font-weight: bold;color: var(--bs-yellow);">the two buttons</h4>
-                                    <h6 class="text-center">conductivity</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h3 class="text-dark mb-4"><i class="fas fa-table"></i> Capteur</h3>
                     <div class="card shadow">
                         <div class="card-header py-3">
-                            <div class="row">
-                                <div class="col align-self-center">
-                                    <p class="text-primary m-0 fw-bold">Données</p>
-                                </div>
-                                <div class="col-2 text-start align-self-center"><button class="btn btn-primary" type="button" id="Refresh">Refresh</button></div>
-                            </div>
+                            <p class="text-primary m-0 fw-bold">Données</p>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive table mt-2" id="dataTable-1" role="grid" aria-describedby="dataTable_info">
+                            <div class="row">
+                                <div class="col-md-8 text-nowrap">
+                                    <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable"><label class="form-label">Show&nbsp;<select class="d-inline-block form-select form-select-sm" id="showNumber">
+                                                <option value="10" selected="">10</option>
+                                                <option value="25">25</option>
+                                                <option value="50">50</option>
+                                                <option value="100">100</option>
+                                            </select>&nbsp;</label></div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div id="dataTable_filter_Name" class="dataTables_filter" aria-controls="dataTable">
+                                        <select class="d-inline-block form-select form-select-sm" id="filterName">
+                                            <option value="id">id</option>
+                                            <option value="date" selected="">date</option>
+                                            <option value="pH">pH</option>
+                                            <option value="oxygen">oxygen</option>
+                                            <option value="conductivity">conductivity</option>
+                                            <option value="turbidity">turbidity</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="text-md-end dataTables_filter" id="dataTable_filter_Value"><label class="form-label"><input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Search" id="filterValue"></label></div>
+                                </div>
+                            </div>
+                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
                                 <table class="table my-0" id="dataTable">
                                     <thead>
                                         <tr>
@@ -119,7 +178,6 @@
                                         </tr>
                                     </thead>
                                     <tbody id="capteurDonnee">
-                                        <td><strong>Get your first data by clicking on one of the two buttons ! </strong><small>( GETDATA / GETRT )</small></td>
                                     </tbody>
                                     <tfoot>
                                         <tr>
@@ -134,9 +192,100 @@
                                     </tfoot>
                                 </table>
                             </div>
+                            <div class="row">
+                                <div class="col-md-6 align-self-center">
+                                    <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                                        <ul class="pagination">
+                                            <li class="page-item" value=""><a class="page-link posButton" aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+                                            <li class="page-item"><a class="page-link posButton" href="#">0</a></li>
+                                            <li class="page-item active"><a class="page-link posButton" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link posButton" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link posButton" aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="Login">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-primary">
+                        <svg style="margin: auto;" width="50px" height="50px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                            <g transform="translate(50 50)"><g transform="scale(0.23055509576307065)">
+                            <path d="M0 0L0 -40A40 40 0 0 1 19.999999999999996 -34.64101615137755" transform="rotate(0 0 0)" stroke="none" fill="#d002d8"></path>
+                            <animateTransform attributeName="transform" type="scale" values="0.23055509576307065;0.30495658227799793;0.7844553129649303;0.6330122535401268;0.23055509576307065" keyTimes="0;0.25;0.5;0.75;1" dur="0.98s" repeatCount="indefinite"></animateTransform>
+                            </g><g transform="scale(0.7563281940591027)">
+                            <path d="M0 0L0 -40A40 40 0 0 1 19.999999999999996 -34.64101615137755" transform="rotate(30 0 0)" stroke="none" fill="#d80275"></path>
+                            <animateTransform attributeName="transform" type="scale" values="0.7563281940591027;0.4321476348518495;0.3054792696097095;0.8800714637121553;0.33107991131092196;0.770662563492935;0.7563281940591027" keyTimes="0;0.16666666666666666;0.3333333333333333;0.5;0.6666666666666666;0.8333333333333334;1" dur="0.98s" repeatCount="indefinite"></animateTransform>
+                            </g><g transform="scale(0.792185567152214)">
+                            <path d="M0 0L0 -40A40 40 0 0 1 19.999999999999996 -34.64101615137755" transform="rotate(60 0 0)" stroke="none" fill="#0ad802"></path>
+                            <animateTransform attributeName="transform" type="scale" values="0.792185567152214;0.16495778784531223;0.792185567152214" keyTimes="0;0.5;1" dur="0.98s" repeatCount="indefinite"></animateTransform>
+                            </g><g transform="scale(0.6244633880416197)">
+                            <path d="M0 0L0 -40A40 40 0 0 1 19.999999999999996 -34.64101615137755" transform="rotate(90 0 0)" stroke="none" fill="#d86502"></path>
+                            <animateTransform attributeName="transform" type="scale" values="0.6244633880416197;0.825268015716231;0.6040428719138717;0.9222078457517047;0.1906597428997563;0.6607476891077467;0.6244633880416197" keyTimes="0;0.16666666666666666;0.3333333333333333;0.5;0.6666666666666666;0.8333333333333334;1" dur="0.98s" repeatCount="indefinite"></animateTransform>
+                            </g><g transform="scale(0.8554014785599822)">
+                            <path d="M0 0L0 -40A40 40 0 0 1 19.999999999999996 -34.64101615137755" transform="rotate(120 0 0)" stroke="none" fill="#d002d8"></path>
+                            <animateTransform attributeName="transform" type="scale" values="0.8554014785599822;0.8175732998315592;0.15250676206701652;0.8554014785599822" keyTimes="0;0.3333333333333333;0.6666666666666666;1" dur="0.98s" repeatCount="indefinite"></animateTransform>
+                            </g><g transform="scale(0.2641268660464312)">
+                            <path d="M0 0L0 -40A40 40 0 0 1 19.999999999999996 -34.64101615137755" transform="rotate(150 0 0)" stroke="none" fill="#d80275"></path>
+                            <animateTransform attributeName="transform" type="scale" values="0.2641268660464312;0.0453891097835496;0.2641268660464312" keyTimes="0;0.5;1" dur="0.98s" repeatCount="indefinite"></animateTransform>
+                            </g><g transform="scale(0.0822393826619301)">
+                            <path d="M0 0L0 -40A40 40 0 0 1 19.999999999999996 -34.64101615137755" transform="rotate(180 0 0)" stroke="none" fill="#0ad802"></path>
+                            <animateTransform attributeName="transform" type="scale" values="0.0822393826619301;0.5076994396266454;0.5163530281760724;0.338134211088839;0.0822393826619301" keyTimes="0;0.25;0.5;0.75;1" dur="0.98s" repeatCount="indefinite"></animateTransform>
+                            </g><g transform="scale(0.6243416189995064)">
+                            <path d="M0 0L0 -40A40 40 0 0 1 19.999999999999996 -34.64101615137755" transform="rotate(210 0 0)" stroke="none" fill="#d86502"></path>
+                            <animateTransform attributeName="transform" type="scale" values="0.6243416189995064;0.5438130745863236;0.7498547820083945;0.49611517327250454;0.6243416189995064" keyTimes="0;0.25;0.5;0.75;1" dur="0.98s" repeatCount="indefinite"></animateTransform>
+                            </g><g transform="scale(0.13350743781080965)">
+                            <path d="M0 0L0 -40A40 40 0 0 1 19.999999999999996 -34.64101615137755" transform="rotate(240 0 0)" stroke="none" fill="#d002d8"></path>
+                            <animateTransform attributeName="transform" type="scale" values="0.13350743781080965;0.7138965733543937;0.8769271711978104;0.06694550648496034;0.34481581334966316;0.5835242510648233;0.13350743781080965" keyTimes="0;0.16666666666666666;0.3333333333333333;0.5;0.6666666666666666;0.8333333333333334;1" dur="0.98s" repeatCount="indefinite"></animateTransform>
+                            </g><g transform="scale(0.6461691376154014)">
+                            <path d="M0 0L0 -40A40 40 0 0 1 19.999999999999996 -34.64101615137755" transform="rotate(270 0 0)" stroke="none" fill="#d80275"></path>
+                            <animateTransform attributeName="transform" type="scale" values="0.6461691376154014;0.025529055457246264;0.7857692802800377;0.03073983087118426;0.6461691376154014" keyTimes="0;0.25;0.5;0.75;1" dur="0.98s" repeatCount="indefinite"></animateTransform>
+                            </g><g transform="scale(0.27601299043232097)">
+                            <path d="M0 0L0 -40A40 40 0 0 1 19.999999999999996 -34.64101615137755" transform="rotate(300 0 0)" stroke="none" fill="#0ad802"></path>
+                            <animateTransform attributeName="transform" type="scale" values="0.27601299043232097;0.7654334068222957;0.7722025145401563;0.3288975790468356;0.9097445640336147;0.27601299043232097" keyTimes="0;0.2;0.4;0.6;0.8;1" dur="0.98s" repeatCount="indefinite"></animateTransform>
+                            </g><g transform="scale(0.7562814965621921)">
+                            <path d="M0 0L0 -40A40 40 0 0 1 19.999999999999996 -34.64101615137755" transform="rotate(330 0 0)" stroke="none" fill="#d86502"></path>
+                            <animateTransform attributeName="transform" type="scale" values="0.7562814965621921;0.11479883701677895;0.4963544387344554;0.9312789363834434;0.24014885420700227;0.7562814965621921" keyTimes="0;0.2;0.4;0.6;0.8;1" dur="0.98s" repeatCount="indefinite"></animateTransform>
+                            </g></g>
+                            </svg>
+                    &nbsp;Login</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="padding: 25px;">
+                    <div style="border-bottom-color: var(--bs-orange);box-shadow: 3px 10px 17px 6px var(--bs-gray-200);border-radius: 10px;padding: 15px 15px;">
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-flex">
+                                <div class="flex-grow-1 bg-login-image" style="background-image: url(&quot;assets/img/dogs/image3.jpeg&quot;);"></div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h4 class="text-dark mb-4">Welcome Back!</h4>
+                                    </div>
+                                    <form class="user">
+                                        <div class="mb-3"><input class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Username" name="username"></div>
+                                        <div class="mb-3"><input class="form-control form-control-user" type="password" id="exampleInputPassword" placeholder="Password" name="password"></div>
+                                        <div class="mb-3">
+                                            <div class="custom-control custom-checkbox small">
+                                                <div class="form-check"><input class="form-check-input custom-control-input" type="checkbox" id="formCheck-1" name="remember"><label class="form-check-label custom-control-label" for="formCheck-1">Remember Me</label></div>
+                                            </div>
+                                        </div><button class="btn btn-primary d-block btn-user w-100" type="submit">Login</button>
+                                        <hr>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light btn-sm" type="button" data-bs-dismiss="modal">Close</button></div>
             </div>
         </div>
     </div>
@@ -260,7 +409,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>
-    <script src="assets/js/index/script.js"></script>
+    <script src="assets/js/table/script.js"></script>
 </body>
 
 </html>
