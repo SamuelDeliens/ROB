@@ -12,7 +12,6 @@ from Client import Client
 from BDD import BDD
 from FileControler import FileControler
 
-
 type_ = sys.argv[1]
 action_ = sys.argv[2]
 step_ = sys.argv[3]
@@ -31,13 +30,14 @@ def controler():
         client.execute("GETDATA")
     elif(type_ == "GETRT"):
         if(action_ == "launch"):
-            fileControler.writeFile("continu")
+            fileControler.writeStatus("GETRT", "continu")
             client.execute("GETRT")
         elif(action_ == "stop"):
             fileControler.writeFile("stop")
     elif(type_ == "CALIBRATE"):
         client.execute("CALIBRATE "+ action_ +" "+ step_)
-        
+    elif(type_ == "SERVO"):
+        client.execute("SERVO "+ action_ +" "+ step_)
 
 # --------------------- SCRIPT -------------------------
 

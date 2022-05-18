@@ -16,6 +16,7 @@ class Sensor:
         self.kvalue= 1.0
         self.oxygenTable = [14460, 14220, 13820, 13440, 13090, 12740, 12420, 12110, 11010, 11530, 11260, 11010, 10770, 10530, 10300, 10080, 9860, 9660, 9460, 9270, 9080, 8900, 8730, 8570, 8410, 8250, 8110, 7960, 7820, 7690, 7560, 7430, 7300, 7180, 7070, 6950, 6840, 6730, 6630, 6530, 6410]
         self.adc = MCP3008()
+        self.fileControler = FileControler()
         self.configSensor(100.0)
 
 
@@ -23,7 +24,7 @@ class Sensor:
 
     def configSensor(self, _average):
         self.average = _average
-        self.configPoint = FileControler.readFile()
+        self.configPoint = self.fileControler.readFile()
 
 # --------------------- Compo -------------------------
 
@@ -66,7 +67,7 @@ class Sensor:
             self.neutralVoltage = voltage 
         else:
             self.acidVoltage = voltage
-        FileControler.writePartFile("sensor", self.configPoint)
+        self.fileControler.writePartFile("sensor", self.configPoint)
         return "Done"
     
     def calibrateOxygen(self, step):
@@ -76,7 +77,7 @@ class Sensor:
             self.oxyvaluelow = voltage
         else:
              self.oxyvalueHigh = voltage
-        FileControler.writePartFile("sensor", self.configPoint)
+        self.fileControler.writePartFile("sensor", self.configPoint)
         return "Done"
              
     def calibrateConductivity(self, step):
@@ -88,7 +89,7 @@ class Sensor:
         else:
             valueTemp = 820.0*200.0*12.88/1000.0/voltage
             self.kvalueHigh =  valueTemp
-        FileControler.writePartFile("sensor", self.configPoint)
+        self.fileControler.writePartFile("sensor", self.configPoint)
         return "Done"
   
   

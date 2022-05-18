@@ -17,6 +17,7 @@ class Client:
         self.HOST= '192.168.0.10'
         self.PORT= 6780
         self.client=''
+        self.status = {"GETRT": {"status": "stop"}}
         self.BDD= BDD()
         self.fileControler = FileControler()
 
@@ -27,6 +28,7 @@ class Client:
         self.HOST= _HOST
         self.PORT= _PORT
         self.client=''
+        self.status = self.fileControler.readFile()
         
         
 #----------------------- String -> Tab ------------------
@@ -47,6 +49,7 @@ class Client:
     def connection(self) :
         self.client= socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client.connect((self.HOST, self.PORT))
+        print("connected")
         
     def sendMsg(self, message):
         n = self.client.send(str.encode(message))
@@ -64,29 +67,40 @@ class Client:
         self.client.close()
         
 
-#----------------------- Execution -----------------------
+#----------------------- Execution DATA -----------------------
         
     def getData(self):
         donnees = self.receive()
         self.BDD.inssertBDD(donnees)
         self.sendMsg('stop')
+        isFinish = self.client.recv(1024).decode()
+        print(isFinish)
     
     def getRT(self):
-        status = self.fileControler.readFile()
-        while status == "continu" :
+        self.status = self.fileControler.readFile()
+        while self.status["GETRT"]["status"] == "continu" :
             donnees = self.receive()
             donnees = self.receive()
             time.sleep(0.5) #delay insertion pour Interface
             self.BDD.inssertBDD(donnees)
             status = self.fileControler.readFile()
-            if(status == "continu"):
+            if(self.status["GETRT"]["status"] == "continu"):
                 self.sendMsg('continu')
         self.sendMsg('stop')
+        isFinish = self.client.recv(1024).decode()
+        print(isFinish)
         
     def calibrate(self):
         isCalibrate = self.client.recv(1024).decode()
         print(isCalibrate)
         
+#----------------------- Execution Sensor-----------------------
+    
+    def servo(self):
+        isMove = self.client.recv(1024).decode()
+        print(isMove)
+    
+#----------------------- Controler -----------------------
         
     def controler(self, message):
         if(message == "GETDATA"):
@@ -95,7 +109,8 @@ class Client:
             self.getRT()
         elif("CALIBRATE" in message):
             self.calibrate()
-            
+        elif("SERVO" in message):
+            self.servo() 
 
     def execute(self, message):
         self.connection()
@@ -103,6 +118,3 @@ class Client:
         self.controler(message)
         self.deconnection()
         print("end")
-        
-        
-#-------------------appel fonction --------------
