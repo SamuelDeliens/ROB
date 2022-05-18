@@ -30,7 +30,7 @@
 
 <body id="page-top">
     <div id="wrapper">
-        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+        <nav id="navBarLeft" class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion p-0 bg-gradient-primary" style="background-color: black;">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
                 <div id="love" class="sidebar-brand-icon rotate-n-15"><i class="fas fa-heart jello animated" data-bss-hover-animate="jello"></i></div>
                     <div class="sidebar-brand-text mx-3"><span>mWL</span></div>
@@ -47,7 +47,7 @@
         </nav>
         <div class="d-flex flex-column" id="content-wrapper"> 
                 <div id="content">
-                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
                     <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
                         <form class="d-none d-sm-inline-block ms-md-3 my-2 my-md-0 mw-100 navbar-search" style="margin-right: 20px;">
                             <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ..."><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
@@ -120,8 +120,8 @@
                             </li>
                         </ul>
                     </div>
-                </nav>
-                <div class="container-fluid">
+                    </nav>
+                    <div class="container-fluid">
                     <h3 class="text-dark mb-4"><i class="fa fa-feed"></i> Capteur</h3>
                     <div class="card shadow" style="margin-bottom: 30px;">
                         <div class="card-header py-3">
@@ -222,7 +222,10 @@
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
+                <div id="loveDiv" style="display: none; background-color: black;">
+                    <img src="assets/img/loveU.png">
                 </div>
             </div>
     </div>

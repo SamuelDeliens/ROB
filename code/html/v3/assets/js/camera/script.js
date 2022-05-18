@@ -7,6 +7,7 @@
 function init() {
     checkPrivileges();
     role_display("Camera");
+    setControlerCamera();
     listener("Camera");
 }
 
