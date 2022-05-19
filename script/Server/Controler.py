@@ -40,7 +40,7 @@ class Controler:
 
 # --------------------- GETRT -----------------------
 
-    def getRTcontroler(self,command):
+    def getRTcontroler(self,continu):
         while continu == True:
             print(continu)
             message = bytearray(str(Actioner.sensor.measures()), 'utf-8')
@@ -86,9 +86,9 @@ class Controler:
         
         #-------------GETRT------------
         if (command == "GETDATA" or command == "GETRT" or command == "continu"):
-            message = getRTcontroler(True)
+            message = self.getRTcontroler(True)
         elif (command == "stop"):
-            message = getRTcontroler(False)
+            message = self.getRTcontroler(False)
             
         #-------------CALIBRATE------------
         elif ("CALIBRATE" in command):

@@ -4,7 +4,6 @@
 
 function listener(page) {
     var buttonLove = document.getElementById("love");
-    console.log(buttonLove);
     if(buttonLove) {buttonLove.addEventListener("click", function() {controlerDiv()}); }
 
     var buttonCalibrateType = document.getElementsByClassName("calibrationType");
@@ -76,15 +75,22 @@ function listener(page) {
 //-----------------Page------------------
 
 function controlerDiv() {
-    var div1 = document.getElementById("content");
-    console.log(div1);
-    var div2 = document.getElementById("loveDiv");
-    if (div1.style.display == "none") {
-        div1.style.display = "";
-        div2.style.display = "none";
+    var contenu = document.getElementById("content");
+    var love = document.getElementById("loveDiv");
+    var navBar = document.getElementById("navBarLeft");
+    var contentTot = document.getElementById("content-wrapper");
+    if (contenu.style.display == "none") {
+        contenu.style.display = "";
+        love.style.display = "none";
+        navBar.classList.add("bg-gradient-primary");
+        contentTot.style.removeProperty("background-color");
     } else {
-        div1.style.display = "none";
-        div2.style.display = "";
+        contenu.style.display = "none";
+        love.style.display = "";
+        navBar.classList.remove("bg-gradient-primary");
+        contentTot.style.setProperty("background-color", "black");
+        //style="background-color: black;"
+        //div3.style.setProperty();
     }
 }
 

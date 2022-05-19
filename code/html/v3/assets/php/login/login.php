@@ -1,5 +1,7 @@
 <?php
 
+require 'config.php';
+
 //------------------------------------- SCRIPT -------------------------------------
 
 error_reporting(E_ALL);
@@ -43,16 +45,16 @@ function connection_manual() {
         $username = stripslashes($_REQUEST['username']);
         $password = stripslashes($_REQUEST['password']);
     
-        $user = ["username" => "Samsam", "password" => "pi"];
-
-        if($username == $user["username"] && $password == $user["password"]) {
-            $_SESSION['username'] = $username;
+        $user = getUser($username, $password);
+        if ($user != []) {
+            $_SESSION['username'] = $user["username"];
             $_SESSION['flash']['success'] = 'connect';
             $time = 24*3600;
             if(isset($_REQUEST["remember"])) {
                 $time = 265*$time;
             }
             createCookie($time);
+            
         } else {
             deconnection();
             $_SESSION['flash']['success'] = 'Error';

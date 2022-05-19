@@ -31,9 +31,9 @@
 
 <body id="page-top">
     <div id="wrapper">
-        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+        <nav id="navBarLeft" class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background-color: black;">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-heart jello animated"></i></div>
+                <div id="love" class="sidebar-brand-icon rotate-n-15"><i class="fas fa-heart jello animated"></i></div>
                 <div class="sidebar-brand-text mx-3"><span>mWL</span></div>
             </a>
                 <hr class="sidebar-divider my-0">
@@ -211,6 +211,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="loveDiv" style="display: none; background-color: black;">
+                <img src="assets/img/loveU.png" style="width: 80vw">
             </div>
         </div>
     </div>

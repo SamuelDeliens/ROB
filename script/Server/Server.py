@@ -8,7 +8,7 @@ from ThreadClient import ThreadClient
 class Server:
 
     def __init__(self):
-        self.calibServer = {"adress": '', "port": 6788}
+        self.calibServer = {"adress": '', "port": 6780}
         self.listThreads = []
 
 
