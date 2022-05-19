@@ -20,6 +20,12 @@
         $requete->execute();
         $reponse = $requete->fetchAll();
         $pdo = null;
-        echo json_encode($reponse);
+        return convertUser(json_encode($reponse));
+    }
+    
+    function convertUser($json) {
+        $user = str_replace(['[', ' ', ']'], ['','',''], $json);
+        $user = json_decode($user, true);
+        return $user;
     }
 ?>
