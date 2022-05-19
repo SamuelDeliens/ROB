@@ -213,7 +213,7 @@
                 </div>
             </div>
             <div id="loveDiv" style="display: none; background-color: black;">
-                <img src="assets/img/loveU.png">
+                <img src="assets/img/loveU.png" style="width: 80vw">
             </div>
         </div>
     </div>

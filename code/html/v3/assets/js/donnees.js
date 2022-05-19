@@ -19,12 +19,12 @@ function setTabRT() {
     }
 }
 
-function setTab(offset, show) {
+function setTab(offset, show, access) {
     var tbody = document.getElementById("capteurDonnee");
     for(i=offset; i<(offset+show); i++) {
         if (document.capteurValues[i]) {
             let tr = document.createElement('tr');
-            if(document.right) {
+            if(document.right && access) {
                 let icon = document.createElement('i');
                 icon.classList.add("fas");
                 icon.classList.add("fa-times");

@@ -33,7 +33,7 @@ def controler():
             fileControler.writeStatus("GETRT", "continu")
             client.execute("GETRT")
         elif(action_ == "stop"):
-            fileControler.writeFile("stop")
+            fileControler.writeStatus("GETRT", "stop")
     elif(type_ == "CALIBRATE"):
         client.execute("CALIBRATE "+ action_ +" "+ step_)
     elif(type_ == "SERVO"):

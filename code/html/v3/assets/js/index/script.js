@@ -16,7 +16,7 @@ function checkValue() {
     if(document.capteurValues) {
         console.log("init");
         initTab();
-        setTab(0, 10);
+        setTab(0, 10, false);
         setTabRT();
     }
 }

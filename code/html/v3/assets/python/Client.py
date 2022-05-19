@@ -83,7 +83,7 @@ class Client:
             donnees = self.receive()
             time.sleep(0.5) #delay insertion pour Interface
             self.BDD.inssertBDD(donnees)
-            status = self.fileControler.readFile()
+            self.status = self.fileControler.readFile()
             if(self.status["GETRT"]["status"] == "continu"):
                 self.sendMsg('continu')
         self.sendMsg('stop')
