@@ -89,8 +89,6 @@ function controlerDiv() {
         love.style.display = "";
         navBar.classList.remove("bg-gradient-primary");
         contentTot.style.setProperty("background-color", "black");
-        //style="background-color: black;"
-        //div3.style.setProperty();
     }
 }
 

@@ -12,9 +12,12 @@ from Client import Client
 from BDD import BDD
 from FileControler import FileControler
 
-type_ = sys.argv[1]
-action_ = sys.argv[2]
-step_ = sys.argv[3]
+if len(sys.argv) > 1:
+    type_ = sys.argv[1]
+if len(sys.argv) > 2:
+    action_ = sys.argv[2]
+if len(sys.argv) > 3:
+    step_ = sys.argv[3]
 
 client = Client()
 fileControler = FileControler()
@@ -31,6 +34,7 @@ def controler():
     elif(type_ == "GETRT"):
         if(action_ == "launch"):
             fileControler.writeStatus("GETRT", "continu")
+            print(fileControler.readFile())
             client.execute("GETRT")
         elif(action_ == "stop"):
             fileControler.writeStatus("GETRT", "stop")
