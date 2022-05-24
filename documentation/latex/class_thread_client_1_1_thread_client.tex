@@ -1,0 +1,114 @@
+\hypertarget{class_thread_client_1_1_thread_client}{}\doxysection{Thread\+Client.\+Thread\+Client Class Reference}
+\label{class_thread_client_1_1_thread_client}\index{ThreadClient.ThreadClient@{ThreadClient.ThreadClient}}
+Inheritance diagram for Thread\+Client.\+Thread\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_thread_client_1_1_thread_client}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_thread_client_1_1_thread_client_a0d3aaffe9b2978a58fdc5de70a6c28b2}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, client\+\_\+, adress\+Client\+\_\+)
+\item 
+def \mbox{\hyperlink{class_thread_client_1_1_thread_client_a253d5edd5e00b2e2234b890a791669a6}{listening}} (self)
+\item 
+def \mbox{\hyperlink{class_thread_client_1_1_thread_client_add30a96480faf5997e40d5846c1f967e}{sending}} (self, message)
+\item 
+def \mbox{\hyperlink{class_thread_client_1_1_thread_client_a4c04a51cbf939636d45d59829aef98df}{run}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_thread_client_1_1_thread_client_aa5ee902c819475dc5485590b5fe490de}{client}}
+\item 
+\mbox{\hyperlink{class_thread_client_1_1_thread_client_a9131b09c607e0619c5f44744a381e08b}{adress\+Client}}
+\item 
+\mbox{\hyperlink{class_thread_client_1_1_thread_client_ac4f3d2413b6c0801d2f4e8362197a4d3}{controler}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Thread of one client
+manage the connection with one client
+
+Args:
+    Thread (Thread): Thread of client
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_thread_client_1_1_thread_client_a0d3aaffe9b2978a58fdc5de70a6c28b2}\label{class_thread_client_1_1_thread_client_a0d3aaffe9b2978a58fdc5de70a6c28b2}} 
+\index{ThreadClient.ThreadClient@{ThreadClient.ThreadClient}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!ThreadClient.ThreadClient@{ThreadClient.ThreadClient}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Thread\+Client.\+Thread\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{client\+\_\+,  }\item[{}]{adress\+Client\+\_\+ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Constructor
+
+Args:
+    client_ (str): IP of connection
+    adressClient_ (str): port of connection
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_thread_client_1_1_thread_client_a253d5edd5e00b2e2234b890a791669a6}\label{class_thread_client_1_1_thread_client_a253d5edd5e00b2e2234b890a791669a6}} 
+\index{ThreadClient.ThreadClient@{ThreadClient.ThreadClient}!listening@{listening}}
+\index{listening@{listening}!ThreadClient.ThreadClient@{ThreadClient.ThreadClient}}
+\doxysubsubsection{\texorpdfstring{listening()}{listening()}}
+{\footnotesize\ttfamily def Thread\+Client.\+Thread\+Client.\+listening (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}listen for command
+
+Returns:
+    str: command receave
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_thread_client_1_1_thread_client_a4c04a51cbf939636d45d59829aef98df}\label{class_thread_client_1_1_thread_client_a4c04a51cbf939636d45d59829aef98df}} 
+\index{ThreadClient.ThreadClient@{ThreadClient.ThreadClient}!run@{run}}
+\index{run@{run}!ThreadClient.ThreadClient@{ThreadClient.ThreadClient}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def Thread\+Client.\+Thread\+Client.\+run (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}script of the connection with one client
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_thread_client_1_1_thread_client_add30a96480faf5997e40d5846c1f967e}\label{class_thread_client_1_1_thread_client_add30a96480faf5997e40d5846c1f967e}} 
+\index{ThreadClient.ThreadClient@{ThreadClient.ThreadClient}!sending@{sending}}
+\index{sending@{sending}!ThreadClient.ThreadClient@{ThreadClient.ThreadClient}}
+\doxysubsubsection{\texorpdfstring{sending()}{sending()}}
+{\footnotesize\ttfamily def Thread\+Client.\+Thread\+Client.\+sending (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}send message
+
+Args:
+    message (str): message to send
+
+Returns:
+    str: Error
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_thread_client_1_1_thread_client_a9131b09c607e0619c5f44744a381e08b}\label{class_thread_client_1_1_thread_client_a9131b09c607e0619c5f44744a381e08b}} 
+\index{ThreadClient.ThreadClient@{ThreadClient.ThreadClient}!adressClient@{adressClient}}
+\index{adressClient@{adressClient}!ThreadClient.ThreadClient@{ThreadClient.ThreadClient}}
+\doxysubsubsection{\texorpdfstring{adressClient}{adressClient}}
+{\footnotesize\ttfamily Thread\+Client.\+Thread\+Client.\+adress\+Client}
+
+\mbox{\Hypertarget{class_thread_client_1_1_thread_client_aa5ee902c819475dc5485590b5fe490de}\label{class_thread_client_1_1_thread_client_aa5ee902c819475dc5485590b5fe490de}} 
+\index{ThreadClient.ThreadClient@{ThreadClient.ThreadClient}!client@{client}}
+\index{client@{client}!ThreadClient.ThreadClient@{ThreadClient.ThreadClient}}
+\doxysubsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily Thread\+Client.\+Thread\+Client.\+client}
+
+\mbox{\Hypertarget{class_thread_client_1_1_thread_client_ac4f3d2413b6c0801d2f4e8362197a4d3}\label{class_thread_client_1_1_thread_client_ac4f3d2413b6c0801d2f4e8362197a4d3}} 
+\index{ThreadClient.ThreadClient@{ThreadClient.ThreadClient}!controler@{controler}}
+\index{controler@{controler}!ThreadClient.ThreadClient@{ThreadClient.ThreadClient}}
+\doxysubsubsection{\texorpdfstring{controler}{controler}}
+{\footnotesize\ttfamily Thread\+Client.\+Thread\+Client.\+controler}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_thread_client_8py}{Thread\+Client.\+py}}\end{DoxyCompactItemize}

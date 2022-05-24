@@ -1,0 +1,228 @@
+\hypertarget{class_client_1_1_client}{}\doxysection{Client.\+Client Class Reference}
+\label{class_client_1_1_client}\index{Client.Client@{Client.Client}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_client_1_1_client_afcfa9526700b69526d7685df31e93f04}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{class_client_1_1_client_aa8a98a75730000a6d497561043575aef}{config\+Client}} (self, \+\_\+\+HOST, \+\_\+\+PORT)
+\item 
+def \mbox{\hyperlink{class_client_1_1_client_a1d0a9ebccf0c48d8ad5958f6cb032dd8}{convert}} (self, string)
+\item 
+def \mbox{\hyperlink{class_client_1_1_client_afc63013b4646a61c51e1c671acc27e82}{connection}} (self)
+\item 
+def \mbox{\hyperlink{class_client_1_1_client_ac3116ded94f01f6f75c58c12a0f64665}{send\+Msg}} (self, message)
+\item 
+def \mbox{\hyperlink{class_client_1_1_client_ab37fd481f4c0c0840b471d60dec8dc3a}{receive}} (self)
+\item 
+def \mbox{\hyperlink{class_client_1_1_client_a6928e5df14d958a1284a175b84583361}{deconnection}} (self)
+\item 
+def \mbox{\hyperlink{class_client_1_1_client_a290855bb1263e260f8f2464d749b5d5a}{get\+Data}} (self)
+\item 
+def \mbox{\hyperlink{class_client_1_1_client_a68862383760e647eae5ce96b9a791f82}{get\+RT}} (self)
+\item 
+def \mbox{\hyperlink{class_client_1_1_client_a4492e6f50266701c91611c0e3263c312}{calibrate}} (self)
+\item 
+def \mbox{\hyperlink{class_client_1_1_client_a576bafbbc816a6640910153bd68b4c6d}{servo}} (self)
+\item 
+def \mbox{\hyperlink{class_client_1_1_client_a7f9760742bba32d9c750ecb63290e018}{controler}} (self, message)
+\item 
+def \mbox{\hyperlink{class_client_1_1_client_a28cde388cd6ec48bab50ac9cda797d78}{execute}} (self, message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_client_1_1_client_ae96a05f3c5c3ec78dbacd67613d3597d}{HOST}}
+\item 
+\mbox{\hyperlink{class_client_1_1_client_aa654027c2efd3417cd7fc8050c69a7b5}{PORT}}
+\item 
+\mbox{\hyperlink{class_client_1_1_client_ac6ea4f286d1e4b3e771a2c16b13c064a}{client}}
+\item 
+\mbox{\hyperlink{class_client_1_1_client_a9bd534b4ec82629cf2886732abd35e09}{status}}
+\item 
+\mbox{\hyperlink{class_client_1_1_client_a583cfabd45e2a9a96f19fef97b64739c}{BDD}}
+\item 
+\mbox{\hyperlink{class_client_1_1_client_a4756b9db787766f76c0c41f647982c92}{file\+Controler}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Client object
+manage the TCPIP client connection
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_client_1_1_client_afcfa9526700b69526d7685df31e93f04}\label{class_client_1_1_client_afcfa9526700b69526d7685df31e93f04}} 
+\index{Client.Client@{Client.Client}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Constructor
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_client_1_1_client_a4492e6f50266701c91611c0e3263c312}\label{class_client_1_1_client_a4492e6f50266701c91611c0e3263c312}} 
+\index{Client.Client@{Client.Client}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{calibrate()}{calibrate()}}
+{\footnotesize\ttfamily def Client.\+Client.\+calibrate (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}general function to calibrate the sensor
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_client_1_1_client_aa8a98a75730000a6d497561043575aef}\label{class_client_1_1_client_aa8a98a75730000a6d497561043575aef}} 
+\index{Client.Client@{Client.Client}!configClient@{configClient}}
+\index{configClient@{configClient}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{configClient()}{configClient()}}
+{\footnotesize\ttfamily def Client.\+Client.\+config\+Client (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{\+\_\+\+HOST,  }\item[{}]{\+\_\+\+PORT }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}configuration of the client
+
+Args:
+    _HOST (str): ip adress of the connection
+    _PORT (str): port adress of the connection
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_client_1_1_client_afc63013b4646a61c51e1c671acc27e82}\label{class_client_1_1_client_afc63013b4646a61c51e1c671acc27e82}} 
+\index{Client.Client@{Client.Client}!connection@{connection}}
+\index{connection@{connection}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{connection()}{connection()}}
+{\footnotesize\ttfamily def Client.\+Client.\+connection (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}connection to the Server
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_client_1_1_client_a7f9760742bba32d9c750ecb63290e018}\label{class_client_1_1_client_a7f9760742bba32d9c750ecb63290e018}} 
+\index{Client.Client@{Client.Client}!controler@{controler}}
+\index{controler@{controler}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{controler()}{controler()}}
+{\footnotesize\ttfamily def Client.\+Client.\+controler (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Controler to manage the Client
+
+Args:
+    message (str): command
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_client_1_1_client_a1d0a9ebccf0c48d8ad5958f6cb032dd8}\label{class_client_1_1_client_a1d0a9ebccf0c48d8ad5958f6cb032dd8}} 
+\index{Client.Client@{Client.Client}!convert@{convert}}
+\index{convert@{convert}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}}
+{\footnotesize\ttfamily def Client.\+Client.\+convert (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{string }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}decomposed the command to an array
+
+Args:
+    string (str): command string
+
+Returns:
+    array: command decomposed
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_client_1_1_client_a6928e5df14d958a1284a175b84583361}\label{class_client_1_1_client_a6928e5df14d958a1284a175b84583361}} 
+\index{Client.Client@{Client.Client}!deconnection@{deconnection}}
+\index{deconnection@{deconnection}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{deconnection()}{deconnection()}}
+{\footnotesize\ttfamily def Client.\+Client.\+deconnection (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}deconnection with the Server
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_client_1_1_client_a28cde388cd6ec48bab50ac9cda797d78}\label{class_client_1_1_client_a28cde388cd6ec48bab50ac9cda797d78}} 
+\index{Client.Client@{Client.Client}!execute@{execute}}
+\index{execute@{execute}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily def Client.\+Client.\+execute (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}general function for connection with the Server
+
+Args:
+    message (str): command
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_client_1_1_client_a290855bb1263e260f8f2464d749b5d5a}\label{class_client_1_1_client_a290855bb1263e260f8f2464d749b5d5a}} 
+\index{Client.Client@{Client.Client}!getData@{getData}}
+\index{getData@{getData}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily def Client.\+Client.\+get\+Data (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}general function to get one data
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_client_1_1_client_a68862383760e647eae5ce96b9a791f82}\label{class_client_1_1_client_a68862383760e647eae5ce96b9a791f82}} 
+\index{Client.Client@{Client.Client}!getRT@{getRT}}
+\index{getRT@{getRT}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{getRT()}{getRT()}}
+{\footnotesize\ttfamily def Client.\+Client.\+get\+RT (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}general function to get data in RT
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_client_1_1_client_ab37fd481f4c0c0840b471d60dec8dc3a}\label{class_client_1_1_client_ab37fd481f4c0c0840b471d60dec8dc3a}} 
+\index{Client.Client@{Client.Client}!receive@{receive}}
+\index{receive@{receive}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily def Client.\+Client.\+receive (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}receave message from server
+
+Returns:
+    str: message receave
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_client_1_1_client_ac3116ded94f01f6f75c58c12a0f64665}\label{class_client_1_1_client_ac3116ded94f01f6f75c58c12a0f64665}} 
+\index{Client.Client@{Client.Client}!sendMsg@{sendMsg}}
+\index{sendMsg@{sendMsg}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{sendMsg()}{sendMsg()}}
+{\footnotesize\ttfamily def Client.\+Client.\+send\+Msg (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}send any message to the Server
+
+Args:
+    message (str): message send
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_client_1_1_client_a576bafbbc816a6640910153bd68b4c6d}\label{class_client_1_1_client_a576bafbbc816a6640910153bd68b4c6d}} 
+\index{Client.Client@{Client.Client}!servo@{servo}}
+\index{servo@{servo}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{servo()}{servo()}}
+{\footnotesize\ttfamily def Client.\+Client.\+servo (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}general function to control the servo
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_client_1_1_client_a583cfabd45e2a9a96f19fef97b64739c}\label{class_client_1_1_client_a583cfabd45e2a9a96f19fef97b64739c}} 
+\index{Client.Client@{Client.Client}!BDD@{BDD}}
+\index{BDD@{BDD}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{BDD}{BDD}}
+{\footnotesize\ttfamily Client.\+Client.\+BDD}
+
+\mbox{\Hypertarget{class_client_1_1_client_ac6ea4f286d1e4b3e771a2c16b13c064a}\label{class_client_1_1_client_ac6ea4f286d1e4b3e771a2c16b13c064a}} 
+\index{Client.Client@{Client.Client}!client@{client}}
+\index{client@{client}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily Client.\+Client.\+client}
+
+\mbox{\Hypertarget{class_client_1_1_client_a4756b9db787766f76c0c41f647982c92}\label{class_client_1_1_client_a4756b9db787766f76c0c41f647982c92}} 
+\index{Client.Client@{Client.Client}!fileControler@{fileControler}}
+\index{fileControler@{fileControler}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{fileControler}{fileControler}}
+{\footnotesize\ttfamily Client.\+Client.\+file\+Controler}
+
+\mbox{\Hypertarget{class_client_1_1_client_ae96a05f3c5c3ec78dbacd67613d3597d}\label{class_client_1_1_client_ae96a05f3c5c3ec78dbacd67613d3597d}} 
+\index{Client.Client@{Client.Client}!HOST@{HOST}}
+\index{HOST@{HOST}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{HOST}{HOST}}
+{\footnotesize\ttfamily Client.\+Client.\+HOST}
+
+\mbox{\Hypertarget{class_client_1_1_client_aa654027c2efd3417cd7fc8050c69a7b5}\label{class_client_1_1_client_aa654027c2efd3417cd7fc8050c69a7b5}} 
+\index{Client.Client@{Client.Client}!PORT@{PORT}}
+\index{PORT@{PORT}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{PORT}{PORT}}
+{\footnotesize\ttfamily Client.\+Client.\+PORT}
+
+\mbox{\Hypertarget{class_client_1_1_client_a9bd534b4ec82629cf2886732abd35e09}\label{class_client_1_1_client_a9bd534b4ec82629cf2886732abd35e09}} 
+\index{Client.Client@{Client.Client}!status@{status}}
+\index{status@{status}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily Client.\+Client.\+status}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_client_8py}{Client.\+py}}\end{DoxyCompactItemize}

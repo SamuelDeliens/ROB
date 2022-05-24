@@ -1,0 +1,87 @@
+\hypertarget{class_file_controler_1_1_file_controler}{}\doxysection{File\+Controler.\+File\+Controler Class Reference}
+\label{class_file_controler_1_1_file_controler}\index{FileControler.FileControler@{FileControler.FileControler}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_file_controler_1_1_file_controler_ae1f971bb26efb53f8ccb7e8b6aa93bb4}{write\+File}} (cls, data)
+\item 
+def \mbox{\hyperlink{class_file_controler_1_1_file_controler_ac72af4ef447b4ed5b20cf0093f6cc164}{read\+File}} (cls)
+\item 
+def \mbox{\hyperlink{class_file_controler_1_1_file_controler_ad6a2e33ca37608b2050bf7d7f06a4405}{write\+Part\+File}} (cls, part, data)
+\item 
+def \mbox{\hyperlink{class_file_controler_1_1_file_controler_a184416247520d10c5d799ba319e008b8}{write\+Part\+Part\+File}} (cls, part1, part2, data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_file_controler_1_1_file_controler_a85cd79b2698d991693afd413761f9bcb}{path\+File}} = \char`\"{}data.\+json\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}object pemit to touch data saved in file
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_file_controler_1_1_file_controler_ac72af4ef447b4ed5b20cf0093f6cc164}\label{class_file_controler_1_1_file_controler_ac72af4ef447b4ed5b20cf0093f6cc164}} 
+\index{FileControler.FileControler@{FileControler.FileControler}!readFile@{readFile}}
+\index{readFile@{readFile}!FileControler.FileControler@{FileControler.FileControler}}
+\doxysubsubsection{\texorpdfstring{readFile()}{readFile()}}
+{\footnotesize\ttfamily def File\+Controler.\+File\+Controler.\+read\+File (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}read the data file
+
+Returns:
+    str: data in the file
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_file_controler_1_1_file_controler_ae1f971bb26efb53f8ccb7e8b6aa93bb4}\label{class_file_controler_1_1_file_controler_ae1f971bb26efb53f8ccb7e8b6aa93bb4}} 
+\index{FileControler.FileControler@{FileControler.FileControler}!writeFile@{writeFile}}
+\index{writeFile@{writeFile}!FileControler.FileControler@{FileControler.FileControler}}
+\doxysubsubsection{\texorpdfstring{writeFile()}{writeFile()}}
+{\footnotesize\ttfamily def File\+Controler.\+File\+Controler.\+write\+File (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}change the data file
+
+Args:
+    data (str): new data to save
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_file_controler_1_1_file_controler_ad6a2e33ca37608b2050bf7d7f06a4405}\label{class_file_controler_1_1_file_controler_ad6a2e33ca37608b2050bf7d7f06a4405}} 
+\index{FileControler.FileControler@{FileControler.FileControler}!writePartFile@{writePartFile}}
+\index{writePartFile@{writePartFile}!FileControler.FileControler@{FileControler.FileControler}}
+\doxysubsubsection{\texorpdfstring{writePartFile()}{writePartFile()}}
+{\footnotesize\ttfamily def File\+Controler.\+File\+Controler.\+write\+Part\+File (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{part,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}write a part in the json data
+
+Args:
+    part (str): the part to write
+    data (str): new data to save
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_file_controler_1_1_file_controler_a184416247520d10c5d799ba319e008b8}\label{class_file_controler_1_1_file_controler_a184416247520d10c5d799ba319e008b8}} 
+\index{FileControler.FileControler@{FileControler.FileControler}!writePartPartFile@{writePartPartFile}}
+\index{writePartPartFile@{writePartPartFile}!FileControler.FileControler@{FileControler.FileControler}}
+\doxysubsubsection{\texorpdfstring{writePartPartFile()}{writePartPartFile()}}
+{\footnotesize\ttfamily def File\+Controler.\+File\+Controler.\+write\+Part\+Part\+File (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{part1,  }\item[{}]{part2,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}write a part of a part in the json data
+
+Args:
+    part1 (str): the first part to write
+    part2 (str): the secon part to write
+    data (str): new data to save
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_file_controler_1_1_file_controler_a85cd79b2698d991693afd413761f9bcb}\label{class_file_controler_1_1_file_controler_a85cd79b2698d991693afd413761f9bcb}} 
+\index{FileControler.FileControler@{FileControler.FileControler}!pathFile@{pathFile}}
+\index{pathFile@{pathFile}!FileControler.FileControler@{FileControler.FileControler}}
+\doxysubsubsection{\texorpdfstring{pathFile}{pathFile}}
+{\footnotesize\ttfamily string File\+Controler.\+File\+Controler.\+path\+File = \char`\"{}data.\+json\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_file_controler_8py}{File\+Controler.\+py}}\end{DoxyCompactItemize}

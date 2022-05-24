@@ -1,0 +1,117 @@
+\hypertarget{class_server_1_1_server}{}\doxysection{Server.\+Server Class Reference}
+\label{class_server_1_1_server}\index{Server.Server@{Server.Server}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_server_1_1_server_aefa89ee88485894bac2d978236616491}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{class_server_1_1_server_aba731b27161bafb8997fa28e60fda2d6}{config\+Server}} (self, adress, port)
+\item 
+def \mbox{\hyperlink{class_server_1_1_server_af6af1815521791cff5d59372a79d9d4d}{create\+Server}} (self)
+\item 
+def \mbox{\hyperlink{class_server_1_1_server_a02eaa71801dac2a595100a8b47175c5d}{close\+Server}} (self)
+\item 
+def \mbox{\hyperlink{class_server_1_1_server_aa7361eed71b4fc9f97986ef3a4c08a67}{connection}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_server_1_1_server_a752df388f216b3e1c4ebaf47fefd6cf0}{calib\+Server}}
+\item 
+\mbox{\hyperlink{class_server_1_1_server_a4712abba43efa663cf189c5c9dcd1e91}{list\+Threads}}
+\item 
+\mbox{\hyperlink{class_server_1_1_server_a4936f28d5a8ff69472813b7e6a4907ad}{server}}
+\item 
+\mbox{\hyperlink{class_server_1_1_server_aa385351b272a656456bb2ee9001b2e9b}{adress\+Client}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Server object
+manage the TCPIP server connection
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_server_1_1_server_aefa89ee88485894bac2d978236616491}\label{class_server_1_1_server_aefa89ee88485894bac2d978236616491}} 
+\index{Server.Server@{Server.Server}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Server.Server@{Server.Server}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Server.\+Server.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Constructor
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_server_1_1_server_a02eaa71801dac2a595100a8b47175c5d}\label{class_server_1_1_server_a02eaa71801dac2a595100a8b47175c5d}} 
+\index{Server.Server@{Server.Server}!closeServer@{closeServer}}
+\index{closeServer@{closeServer}!Server.Server@{Server.Server}}
+\doxysubsubsection{\texorpdfstring{closeServer()}{closeServer()}}
+{\footnotesize\ttfamily def Server.\+Server.\+close\+Server (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}close the connection
+
+Returns:
+    str: END CONNECTION
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_server_1_1_server_aba731b27161bafb8997fa28e60fda2d6}\label{class_server_1_1_server_aba731b27161bafb8997fa28e60fda2d6}} 
+\index{Server.Server@{Server.Server}!configServer@{configServer}}
+\index{configServer@{configServer}!Server.Server@{Server.Server}}
+\doxysubsubsection{\texorpdfstring{configServer()}{configServer()}}
+{\footnotesize\ttfamily def Server.\+Server.\+config\+Server (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{adress,  }\item[{}]{port }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}configuration of the server
+
+Args:
+    adress (str): ip adress of the connection
+    port (str): port adress of the connection
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_server_1_1_server_aa7361eed71b4fc9f97986ef3a4c08a67}\label{class_server_1_1_server_aa7361eed71b4fc9f97986ef3a4c08a67}} 
+\index{Server.Server@{Server.Server}!connection@{connection}}
+\index{connection@{connection}!Server.Server@{Server.Server}}
+\doxysubsubsection{\texorpdfstring{connection()}{connection()}}
+{\footnotesize\ttfamily def Server.\+Server.\+connection (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}general function to manage the TCPIP server
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_server_1_1_server_af6af1815521791cff5d59372a79d9d4d}\label{class_server_1_1_server_af6af1815521791cff5d59372a79d9d4d}} 
+\index{Server.Server@{Server.Server}!createServer@{createServer}}
+\index{createServer@{createServer}!Server.Server@{Server.Server}}
+\doxysubsubsection{\texorpdfstring{createServer()}{createServer()}}
+{\footnotesize\ttfamily def Server.\+Server.\+create\+Server (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}create the server connection
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_server_1_1_server_aa385351b272a656456bb2ee9001b2e9b}\label{class_server_1_1_server_aa385351b272a656456bb2ee9001b2e9b}} 
+\index{Server.Server@{Server.Server}!adressClient@{adressClient}}
+\index{adressClient@{adressClient}!Server.Server@{Server.Server}}
+\doxysubsubsection{\texorpdfstring{adressClient}{adressClient}}
+{\footnotesize\ttfamily Server.\+Server.\+adress\+Client}
+
+\mbox{\Hypertarget{class_server_1_1_server_a752df388f216b3e1c4ebaf47fefd6cf0}\label{class_server_1_1_server_a752df388f216b3e1c4ebaf47fefd6cf0}} 
+\index{Server.Server@{Server.Server}!calibServer@{calibServer}}
+\index{calibServer@{calibServer}!Server.Server@{Server.Server}}
+\doxysubsubsection{\texorpdfstring{calibServer}{calibServer}}
+{\footnotesize\ttfamily Server.\+Server.\+calib\+Server}
+
+\mbox{\Hypertarget{class_server_1_1_server_a4712abba43efa663cf189c5c9dcd1e91}\label{class_server_1_1_server_a4712abba43efa663cf189c5c9dcd1e91}} 
+\index{Server.Server@{Server.Server}!listThreads@{listThreads}}
+\index{listThreads@{listThreads}!Server.Server@{Server.Server}}
+\doxysubsubsection{\texorpdfstring{listThreads}{listThreads}}
+{\footnotesize\ttfamily Server.\+Server.\+list\+Threads}
+
+\mbox{\Hypertarget{class_server_1_1_server_a4936f28d5a8ff69472813b7e6a4907ad}\label{class_server_1_1_server_a4936f28d5a8ff69472813b7e6a4907ad}} 
+\index{Server.Server@{Server.Server}!server@{server}}
+\index{server@{server}!Server.Server@{Server.Server}}
+\doxysubsubsection{\texorpdfstring{server}{server}}
+{\footnotesize\ttfamily Server.\+Server.\+server}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_server_8py}{Server.\+py}}\end{DoxyCompactItemize}
