@@ -2,14 +2,19 @@
 # --------------------- Measure Sensor -----------------
 # ------------------------------------------------------
 
-import json
 import time
 
 from MCP3008 import MCP3008
 from FileControler import FileControler
 
 class Sensor:
+    """object sensors 
+    get the sensor values
+    """
     def __init__(self):
+        """Contructor
+        define sensor with default parameter
+        """
         self.average = 100.0
         self.temperature= 25.0
         self.configPoint = {"pH": {"neutralVoltage": 1500.0,"acidVoltage": 2032.44}, "oxygen": {"oxyvaluelow": 1300,"oxyvalueHigh": 1600},"conductivity": {"kvaluelow": 1.0,"kvalueHigh": 1.0}}
@@ -22,6 +27,11 @@ class Sensor:
 # --------------------- Config -------------------------
 
     def configSensor(self, _average):
+        """configure the sensor
+
+        Args:
+            _average (int): number of value get before to average
+        """
         self.average = _average
         self.configPoint = FileControler.readFile()["sensor"]
 
@@ -29,6 +39,14 @@ class Sensor:
 
 #Get average value
     def doAverage(self, pin):
+        """get multiple value to average
+
+        Args:
+            pin (int): which sensor to get value
+
+        Returns:
+            int: value get by the sensor
+        """
         mValue = 0.0
         for i in range(int(self.average)):
             value = self.adc.read( channel = (pin) )
@@ -38,6 +56,14 @@ class Sensor:
     
 #get measures
     def measureVoltage(self, outA):
+        """transform sensor value to voltage
+
+        Args:
+            outA (array): array of voltage value of sensors
+
+        Returns:
+            array: same array with voltage value
+        """
         for pin in range(3):
             mValue = self.doAverage(pin)
             voltage = mValue / 1023.0 *3.3
@@ -47,6 +73,14 @@ class Sensor:
 # --------------------- Calibrate -----------------------
     
     def waitStabilisation(self, pin):
+        """calibrate function to wait till the value is stable
+
+        Args:
+            pin (int): pin of the sensor calibrate
+
+        Returns:
+            int: value of the calibration
+        """
         mValue = self.doAverage(pin)
         i=0
         while i<5 :
@@ -60,6 +94,14 @@ class Sensor:
         return mValue
     
     def calibratePH(self, step):
+        """calibration of the pH sensor
+
+        Args:
+            step (int): step of the calibration (1 or 2)
+
+        Returns:
+            str: Done
+        """
         mValue = self.waitStabilisation(0)
         voltage = mValue / 1023.0 *3.3
         if (step == 0):
@@ -70,6 +112,14 @@ class Sensor:
         return "Done"
     
     def calibrateOxygen(self, step):
+        """calibration of the oxygen sensor
+
+        Args:
+            step (int): step of the calibration (1 or 2)
+
+        Returns:
+            str: Done
+        """
         mValue = self.waitStabilisation(1)
         voltage = mValue / 1023.0 *3.3
         if (step == 0):
@@ -80,6 +130,14 @@ class Sensor:
         return "Done"
              
     def calibrateConductivity(self, step):
+        """calibration of the conductivity sensor
+
+        Args:
+            step (int): step of the calibration (1 or 2)
+
+        Returns:
+            str: Done
+        """
         mValue = self.waitStabilisation(2)
         voltage = mValue / 1023.0 *3.3
         if (step == 0):
@@ -96,6 +154,14 @@ class Sensor:
 
 #convert ph
     def convertPH(self, voltage):
+        """conversion voltage to pH
+
+        Args:
+            voltage (int): voltage value of the sensor
+
+        Returns:
+            int: return the pH value
+        """
         slop = (7.0-4.0)/((self.configPoint["pH"]["neutralVoltage"]-1500.0)/3.0 - (self.configPoint["pH"]["acidVoltage"]-1500.0)/3.0)
         intercept = 7.0 - slop*(self.configPoint["pH"]["neutralVoltage"]-1500.0)/3.0
         value = slop*(voltage-1500.0)/3.0+intercept
@@ -103,6 +169,14 @@ class Sensor:
     
 #convert Conductivity
     def convertConductivity(self, voltage):
+        """conversion voltage to ms
+
+        Args:
+            voltage (int): voltage value of the sensor
+
+        Returns:
+            int: return the conductivity value
+        """
         rawEC = 1000*voltage/820.0/200.0
         valueTemp = rawEC
         if (valueTemp > 2.5):
@@ -115,6 +189,14 @@ class Sensor:
     
 #convert Oxygen
     def convertOxygen(self, voltage):
+        """conversion voltage to oxygen
+
+        Args:
+            voltage (int): voltage value of the sensor
+
+        Returns:
+            int: return the oxygen value
+        """
         saturation = (self.temperature - 15) * (self.configPoint["oxygen"]["oxyvalueHigh"] - self.configPoint["oxygen"]["oxyvaluelow"]) / (25 - 15) + self.configPoint["oxygen"]["oxyvaluelow"]
         value = voltage * self.oxygenTable[round(self.temperature)] / saturation
         return value
@@ -122,6 +204,14 @@ class Sensor:
 
 #convert Analogique to Numerique
     def convert(self, outA):
+        """conversion of the three value
+
+        Args:
+            outA (array): array of voltage values
+
+        Returns:
+            array: array of convert values
+        """
         outA[0] = self.convertPH(outA[0])
         outA[1] = self.convertConductivity(outA[1])
         outA[2] = self.convertOxygen(outA[2])
@@ -131,6 +221,11 @@ class Sensor:
 # --------------------- Measure -------------------------
 
     def measures(self):
+        """get value of the sensors
+
+        Returns:
+            array: each value of sensors
+        """
         outA = [0, 0, 0]
         outA = self.measureVoltage(outA)        
         outA = self.convert(outA)

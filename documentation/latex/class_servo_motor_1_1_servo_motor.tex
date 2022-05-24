@@ -1,0 +1,110 @@
+\hypertarget{class_servo_motor_1_1_servo_motor}{}\doxysection{Servo\+Motor.\+Servo\+Motor Class Reference}
+\label{class_servo_motor_1_1_servo_motor}\index{ServoMotor.ServoMotor@{ServoMotor.ServoMotor}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_servo_motor_1_1_servo_motor_af4983604b6a747fa88e04cc63cfff7ca}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{class_servo_motor_1_1_servo_motor_a1762ff5b2cbf9a65e71db427a877fc5a}{config\+Servo}} (self, new\+Calib\+Param)
+\item 
+def \mbox{\hyperlink{class_servo_motor_1_1_servo_motor_a1f69ac1e43897bb7126d796b53218ba1}{rotate\+Direct}} (self, \mbox{\hyperlink{class_servo_motor_1_1_servo_motor_a9a19de789148a637977f8c172caa0482}{angle}})
+\item 
+def \mbox{\hyperlink{class_servo_motor_1_1_servo_motor_a8fce5e919a0e440e838c884aff39000e}{rotate\+Slow}} (self, \mbox{\hyperlink{class_servo_motor_1_1_servo_motor_a9a19de789148a637977f8c172caa0482}{angle}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_servo_motor_1_1_servo_motor_abb33210a1120d1ea6afb1f811564b117}{calib\+Param}}
+\item 
+\mbox{\hyperlink{class_servo_motor_1_1_servo_motor_a9a19de789148a637977f8c172caa0482}{angle}}
+\item 
+\mbox{\hyperlink{class_servo_motor_1_1_servo_motor_a198da4c6a7500f47d4e6810a5f42d4fc}{speed}}
+\item 
+\mbox{\hyperlink{class_servo_motor_1_1_servo_motor_a48bb34028903c93fa2fbe74c61e31fe5}{servo}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Servo object
+manage the position of the camera
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_servo_motor_1_1_servo_motor_af4983604b6a747fa88e04cc63cfff7ca}\label{class_servo_motor_1_1_servo_motor_af4983604b6a747fa88e04cc63cfff7ca}} 
+\index{ServoMotor.ServoMotor@{ServoMotor.ServoMotor}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!ServoMotor.ServoMotor@{ServoMotor.ServoMotor}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Servo\+Motor.\+Servo\+Motor.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Constructor
+define servo with default parameter
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_servo_motor_1_1_servo_motor_a1762ff5b2cbf9a65e71db427a877fc5a}\label{class_servo_motor_1_1_servo_motor_a1762ff5b2cbf9a65e71db427a877fc5a}} 
+\index{ServoMotor.ServoMotor@{ServoMotor.ServoMotor}!configServo@{configServo}}
+\index{configServo@{configServo}!ServoMotor.ServoMotor@{ServoMotor.ServoMotor}}
+\doxysubsubsection{\texorpdfstring{configServo()}{configServo()}}
+{\footnotesize\ttfamily def Servo\+Motor.\+Servo\+Motor.\+config\+Servo (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{new\+Calib\+Param }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}configure the servomotor
+
+Args:
+    newCalibParam (dict): new calibration parameter
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_servo_motor_1_1_servo_motor_a1f69ac1e43897bb7126d796b53218ba1}\label{class_servo_motor_1_1_servo_motor_a1f69ac1e43897bb7126d796b53218ba1}} 
+\index{ServoMotor.ServoMotor@{ServoMotor.ServoMotor}!rotateDirect@{rotateDirect}}
+\index{rotateDirect@{rotateDirect}!ServoMotor.ServoMotor@{ServoMotor.ServoMotor}}
+\doxysubsubsection{\texorpdfstring{rotateDirect()}{rotateDirect()}}
+{\footnotesize\ttfamily def Servo\+Motor.\+Servo\+Motor.\+rotate\+Direct (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{angle }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}direct rotation with angle
+
+Args:
+    angle (int): new angle of the servo
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_servo_motor_1_1_servo_motor_a8fce5e919a0e440e838c884aff39000e}\label{class_servo_motor_1_1_servo_motor_a8fce5e919a0e440e838c884aff39000e}} 
+\index{ServoMotor.ServoMotor@{ServoMotor.ServoMotor}!rotateSlow@{rotateSlow}}
+\index{rotateSlow@{rotateSlow}!ServoMotor.ServoMotor@{ServoMotor.ServoMotor}}
+\doxysubsubsection{\texorpdfstring{rotateSlow()}{rotateSlow()}}
+{\footnotesize\ttfamily def Servo\+Motor.\+Servo\+Motor.\+rotate\+Slow (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{angle }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}slow rotation with direction angle
+
+Args:
+    angle (int): direction of the rotation
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_servo_motor_1_1_servo_motor_a9a19de789148a637977f8c172caa0482}\label{class_servo_motor_1_1_servo_motor_a9a19de789148a637977f8c172caa0482}} 
+\index{ServoMotor.ServoMotor@{ServoMotor.ServoMotor}!angle@{angle}}
+\index{angle@{angle}!ServoMotor.ServoMotor@{ServoMotor.ServoMotor}}
+\doxysubsubsection{\texorpdfstring{angle}{angle}}
+{\footnotesize\ttfamily Servo\+Motor.\+Servo\+Motor.\+angle}
+
+\mbox{\Hypertarget{class_servo_motor_1_1_servo_motor_abb33210a1120d1ea6afb1f811564b117}\label{class_servo_motor_1_1_servo_motor_abb33210a1120d1ea6afb1f811564b117}} 
+\index{ServoMotor.ServoMotor@{ServoMotor.ServoMotor}!calibParam@{calibParam}}
+\index{calibParam@{calibParam}!ServoMotor.ServoMotor@{ServoMotor.ServoMotor}}
+\doxysubsubsection{\texorpdfstring{calibParam}{calibParam}}
+{\footnotesize\ttfamily Servo\+Motor.\+Servo\+Motor.\+calib\+Param}
+
+\mbox{\Hypertarget{class_servo_motor_1_1_servo_motor_a48bb34028903c93fa2fbe74c61e31fe5}\label{class_servo_motor_1_1_servo_motor_a48bb34028903c93fa2fbe74c61e31fe5}} 
+\index{ServoMotor.ServoMotor@{ServoMotor.ServoMotor}!servo@{servo}}
+\index{servo@{servo}!ServoMotor.ServoMotor@{ServoMotor.ServoMotor}}
+\doxysubsubsection{\texorpdfstring{servo}{servo}}
+{\footnotesize\ttfamily Servo\+Motor.\+Servo\+Motor.\+servo}
+
+\mbox{\Hypertarget{class_servo_motor_1_1_servo_motor_a198da4c6a7500f47d4e6810a5f42d4fc}\label{class_servo_motor_1_1_servo_motor_a198da4c6a7500f47d4e6810a5f42d4fc}} 
+\index{ServoMotor.ServoMotor@{ServoMotor.ServoMotor}!speed@{speed}}
+\index{speed@{speed}!ServoMotor.ServoMotor@{ServoMotor.ServoMotor}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily Servo\+Motor.\+Servo\+Motor.\+speed}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_servo_motor_8py}{Servo\+Motor.\+py}}\end{DoxyCompactItemize}

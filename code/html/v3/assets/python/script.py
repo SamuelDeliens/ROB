@@ -25,10 +25,14 @@ fileControler = FileControler()
 #----------------------- Function Global ---------------------
 
 def config():
+    """configuration general
+    """
     client.configClient('192.168.0.10', 6780)
     client.BDD.configBDD('localhost', 'user', 'pi', 'Rov')
     
 def controler():
+    """Controler general for the command
+    """
     if(type_ == "GETDATA"):
         client.execute("GETDATA")
     elif(type_ == "GETRT"):

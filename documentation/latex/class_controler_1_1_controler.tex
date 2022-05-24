@@ -1,0 +1,161 @@
+\hypertarget{class_controler_1_1_controler}{}\doxysection{Controler.\+Controler Class Reference}
+\label{class_controler_1_1_controler}\index{Controler.Controler@{Controler.Controler}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_controler_1_1_controler_a29a3cbc7b77e3110de790a386d3a29fd}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, client\+\_\+, adress\+Client\+\_\+)
+\item 
+def \mbox{\hyperlink{class_controler_1_1_controler_a9f4f12a8d06efa4c916b8c928e4ad467}{init\+Config}} (self)
+\item 
+def \mbox{\hyperlink{class_controler_1_1_controler_a4f4bd1fe4dff099d64e21b174f4a159d}{listening}} (self)
+\item 
+def \mbox{\hyperlink{class_controler_1_1_controler_a8963154c11278efdf24e93278b7ef5e2}{sending}} (self, message)
+\item 
+def \mbox{\hyperlink{class_controler_1_1_controler_ae7591585dd4629588c4fb88718719313}{get\+RTcontroler}} (self, continu)
+\item 
+def \mbox{\hyperlink{class_controler_1_1_controler_a0addcdf9740e13c617fbb87acf6141fe}{calibrate}} (self, command)
+\item 
+def \mbox{\hyperlink{class_controler_1_1_controler_a207f39c453d3e1c2b904fc486894ae22}{servo\+Controler}} (self, command)
+\item 
+def \mbox{\hyperlink{class_controler_1_1_controler_a5b8ee5fb1d49f5b1e0c52a1972a24641}{controler\+Command}} (self, command)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_controler_1_1_controler_a96371b980053879b30a7e5999ec2db6b}{client}}
+\item 
+\mbox{\hyperlink{class_controler_1_1_controler_ac22cbbe60d41dded742b3153263e7588}{adress\+Client}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Controler object
+    Determine what actions to take
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_controler_1_1_controler_a29a3cbc7b77e3110de790a386d3a29fd}\label{class_controler_1_1_controler_a29a3cbc7b77e3110de790a386d3a29fd}} 
+\index{Controler.Controler@{Controler.Controler}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Controler.Controler@{Controler.Controler}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Controler.\+Controler.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{client\+\_\+,  }\item[{}]{adress\+Client\+\_\+ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Constructor
+
+Args:
+    client_ (str): IP of client
+    adressClient_ (str): Port of client
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_controler_1_1_controler_a0addcdf9740e13c617fbb87acf6141fe}\label{class_controler_1_1_controler_a0addcdf9740e13c617fbb87acf6141fe}} 
+\index{Controler.Controler@{Controler.Controler}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!Controler.Controler@{Controler.Controler}}
+\doxysubsubsection{\texorpdfstring{calibrate()}{calibrate()}}
+{\footnotesize\ttfamily def Controler.\+Controler.\+calibrate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{command }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Controler to calibrate the sensor
+
+Args:
+    command (str): type and step for the calibration
+
+Returns:
+    str: calibration progress
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_controler_1_1_controler_a5b8ee5fb1d49f5b1e0c52a1972a24641}\label{class_controler_1_1_controler_a5b8ee5fb1d49f5b1e0c52a1972a24641}} 
+\index{Controler.Controler@{Controler.Controler}!controlerCommand@{controlerCommand}}
+\index{controlerCommand@{controlerCommand}!Controler.Controler@{Controler.Controler}}
+\doxysubsubsection{\texorpdfstring{controlerCommand()}{controlerCommand()}}
+{\footnotesize\ttfamily def Controler.\+Controler.\+controler\+Command (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{command }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}General controler
+
+Args:
+    command (str): Full command
+
+Returns:
+    str: progress
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_controler_1_1_controler_ae7591585dd4629588c4fb88718719313}\label{class_controler_1_1_controler_ae7591585dd4629588c4fb88718719313}} 
+\index{Controler.Controler@{Controler.Controler}!getRTcontroler@{getRTcontroler}}
+\index{getRTcontroler@{getRTcontroler}!Controler.Controler@{Controler.Controler}}
+\doxysubsubsection{\texorpdfstring{getRTcontroler()}{getRTcontroler()}}
+{\footnotesize\ttfamily def Controler.\+Controler.\+get\+RTcontroler (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{continu }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}controler to get data in Real Time
+
+Args:
+    continu (bool): permit to stop the RT
+
+Returns:
+    str: End
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_controler_1_1_controler_a9f4f12a8d06efa4c916b8c928e4ad467}\label{class_controler_1_1_controler_a9f4f12a8d06efa4c916b8c928e4ad467}} 
+\index{Controler.Controler@{Controler.Controler}!initConfig@{initConfig}}
+\index{initConfig@{initConfig}!Controler.Controler@{Controler.Controler}}
+\doxysubsubsection{\texorpdfstring{initConfig()}{initConfig()}}
+{\footnotesize\ttfamily def Controler.\+Controler.\+init\+Config (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}general configuration
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_controler_1_1_controler_a4f4bd1fe4dff099d64e21b174f4a159d}\label{class_controler_1_1_controler_a4f4bd1fe4dff099d64e21b174f4a159d}} 
+\index{Controler.Controler@{Controler.Controler}!listening@{listening}}
+\index{listening@{listening}!Controler.Controler@{Controler.Controler}}
+\doxysubsubsection{\texorpdfstring{listening()}{listening()}}
+{\footnotesize\ttfamily def Controler.\+Controler.\+listening (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}listen command sent by client
+
+Returns:
+    str: command
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_controler_1_1_controler_a8963154c11278efdf24e93278b7ef5e2}\label{class_controler_1_1_controler_a8963154c11278efdf24e93278b7ef5e2}} 
+\index{Controler.Controler@{Controler.Controler}!sending@{sending}}
+\index{sending@{sending}!Controler.Controler@{Controler.Controler}}
+\doxysubsubsection{\texorpdfstring{sending()}{sending()}}
+{\footnotesize\ttfamily def Controler.\+Controler.\+sending (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}send command to client
+
+Args:
+    message (str): message send to client
+
+Returns:
+    str: Error
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_controler_1_1_controler_a207f39c453d3e1c2b904fc486894ae22}\label{class_controler_1_1_controler_a207f39c453d3e1c2b904fc486894ae22}} 
+\index{Controler.Controler@{Controler.Controler}!servoControler@{servoControler}}
+\index{servoControler@{servoControler}!Controler.Controler@{Controler.Controler}}
+\doxysubsubsection{\texorpdfstring{servoControler()}{servoControler()}}
+{\footnotesize\ttfamily def Controler.\+Controler.\+servo\+Controler (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{command }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Controler to servomotor
+
+Args:
+    command (str): type and angle for rotate servomotor
+
+Returns:
+    str: End
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_controler_1_1_controler_ac22cbbe60d41dded742b3153263e7588}\label{class_controler_1_1_controler_ac22cbbe60d41dded742b3153263e7588}} 
+\index{Controler.Controler@{Controler.Controler}!adressClient@{adressClient}}
+\index{adressClient@{adressClient}!Controler.Controler@{Controler.Controler}}
+\doxysubsubsection{\texorpdfstring{adressClient}{adressClient}}
+{\footnotesize\ttfamily Controler.\+Controler.\+adress\+Client}
+
+\mbox{\Hypertarget{class_controler_1_1_controler_a96371b980053879b30a7e5999ec2db6b}\label{class_controler_1_1_controler_a96371b980053879b30a7e5999ec2db6b}} 
+\index{Controler.Controler@{Controler.Controler}!client@{client}}
+\index{client@{client}!Controler.Controler@{Controler.Controler}}
+\doxysubsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily Controler.\+Controler.\+client}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_controler_8py}{Controler.\+py}}\end{DoxyCompactItemize}
