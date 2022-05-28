@@ -20,9 +20,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ROV.png"/></td>
   <td id="projectalign">
-   <div id="projectname">BlueRov
+   <div id="projectname">BlueRov<span id="projectnumber">&#160;v1</span>
    </div>
+   <div id="projectbrief">a submarine robot project</div>
   </td>
  </tr>
  </tbody>
@@ -117,10 +119,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ac720275ed8b7f20901d5356218b28c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eb6a1cd2e5128b5929828f199155039"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor_1_1_sensor.html#a5eb6a1cd2e5128b5929828f199155039">adc</a></td></tr>
 <tr class="separator:a5eb6a1cd2e5128b5929828f199155039"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9644d030a0374aeaa2a6359aa8b9de8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor_1_1_sensor.html#ae9644d030a0374aeaa2a6359aa8b9de8">neutralVoltage</a></td></tr>
-<tr class="separator:ae9644d030a0374aeaa2a6359aa8b9de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f5a7387b0eaec2c1d5981c0acba6e7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor_1_1_sensor.html#a3f5a7387b0eaec2c1d5981c0acba6e7d">acidVoltage</a></td></tr>
-<tr class="separator:a3f5a7387b0eaec2c1d5981c0acba6e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0993759f73ea298dbcde43763e93c859"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor_1_1_sensor.html#a0993759f73ea298dbcde43763e93c859">oxyvaluelow</a></td></tr>
 <tr class="separator:a0993759f73ea298dbcde43763e93c859"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada16c92941a946105bc40fedc7295c3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor_1_1_sensor.html#ada16c92941a946105bc40fedc7295c3f">oxyvalueHigh</a></td></tr>
@@ -184,7 +182,7 @@ define sensor with default parameter
 
 Args:
     step (int): step of the calibration (1 or 2)
-
+    
 Returns:
     str: Done
 </pre> 
@@ -219,7 +217,7 @@ Returns:
 
 Args:
     step (int): step of the calibration (1 or 2)
-
+    
 Returns:
     str: Done
 </pre> 
@@ -254,7 +252,7 @@ Returns:
 
 Args:
     step (int): step of the calibration (1 or 2)
-
+    
 Returns:
     str: Done
 </pre> 
@@ -321,7 +319,7 @@ Args:
 
 Args:
     outA (array): array of voltage values
-
+    
 Returns:
     array: array of convert values
 </pre> 
@@ -356,7 +354,7 @@ Returns:
 
 Args:
     voltage (int): voltage value of the sensor
-
+    
 Returns:
     int: return the conductivity value
 </pre> 
@@ -391,7 +389,7 @@ Returns:
 
 Args:
     voltage (int): voltage value of the sensor
-
+    
 Returns:
     int: return the oxygen value
 </pre> 
@@ -426,7 +424,7 @@ Returns:
 
 Args:
     voltage (int): voltage value of the sensor
-
+    
 Returns:
     int: return the pH value
 </pre> 
@@ -461,7 +459,7 @@ Returns:
 
 Args:
     pin (int): which sensor to get value
-
+    
 Returns:
     int: value get by the sensor
 </pre> 
@@ -518,7 +516,7 @@ Returns:
 
 Args:
     outA (array): array of voltage value of sensors
-
+    
 Returns:
     array: same array with voltage value
 </pre> 
@@ -553,27 +551,13 @@ Returns:
 
 Args:
     pin (int): pin of the sensor calibrate
-
+    
 Returns:
     int: value of the calibration
 </pre> 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a3f5a7387b0eaec2c1d5981c0acba6e7d" name="a3f5a7387b0eaec2c1d5981c0acba6e7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f5a7387b0eaec2c1d5981c0acba6e7d">&#9670;&nbsp;</a></span>acidVoltage</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Sensor.Sensor.acidVoltage</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a5eb6a1cd2e5128b5929828f199155039" name="a5eb6a1cd2e5128b5929828f199155039"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5eb6a1cd2e5128b5929828f199155039">&#9670;&nbsp;</a></span>adc</h2>
 
@@ -658,20 +642,6 @@ Returns:
 
 </div>
 </div>
-<a id="ae9644d030a0374aeaa2a6359aa8b9de8" name="ae9644d030a0374aeaa2a6359aa8b9de8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9644d030a0374aeaa2a6359aa8b9de8">&#9670;&nbsp;</a></span>neutralVoltage</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Sensor.Sensor.neutralVoltage</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ac720275ed8b7f20901d5356218b28c8f" name="ac720275ed8b7f20901d5356218b28c8f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac720275ed8b7f20901d5356218b28c8f">&#9670;&nbsp;</a></span>oxygenTable</h2>
 
@@ -729,7 +699,7 @@ Returns:
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="_sensor_8py.html">Sensor.py</a></li>
+<li>script/Server/<a class="el" href="_sensor_8py.html">Sensor.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,0 +1,230 @@
+\hypertarget{classsensor_backup_1_1_sensor}{}\doxysection{sensor\+Backup.\+Sensor Class Reference}
+\label{classsensor_backup_1_1_sensor}\index{sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classsensor_backup_1_1_sensor_a5ec67ba9b58a558b40b6daf2450ec70f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classsensor_backup_1_1_sensor_aac113ac430164bd5db11fcd72b045b95}{config\+Sensor}} (self, \+\_\+average)
+\item 
+def \mbox{\hyperlink{classsensor_backup_1_1_sensor_a2a7f23a24b275bd26a4c33405e6cbfde}{do\+Average}} (self, pin)
+\item 
+def \mbox{\hyperlink{classsensor_backup_1_1_sensor_aa89916999b27caa0bc4f4443f09eb9ba}{measure\+Voltage}} (self, outA)
+\item 
+def \mbox{\hyperlink{classsensor_backup_1_1_sensor_a04506925cd8cb5b7d37281b78e7b5116}{wait\+Stabilisation}} (self, pin)
+\item 
+def \mbox{\hyperlink{classsensor_backup_1_1_sensor_ae61eaa1689584a408299d1a1dd54a130}{calibrate\+PH}} (self, step)
+\item 
+def \mbox{\hyperlink{classsensor_backup_1_1_sensor_a470ea1b223fa2d398ac471350084cd14}{calibrate\+Oxygen}} (self, step)
+\item 
+def \mbox{\hyperlink{classsensor_backup_1_1_sensor_aadc13b6eb4e865252dc15d4382a6de6a}{calibrate\+Conductivity}} (self, step)
+\item 
+def \mbox{\hyperlink{classsensor_backup_1_1_sensor_a0a2a6161f21131d3c4c0455aa6d1bca4}{convert\+PH}} (self, voltage)
+\item 
+def \mbox{\hyperlink{classsensor_backup_1_1_sensor_ac318234ccc2f4bcc978dade629a4b9b6}{convert\+Conductivity}} (self, voltage)
+\item 
+def \mbox{\hyperlink{classsensor_backup_1_1_sensor_af90344da8a0c33dfd6f29db206461942}{convert\+Oxygen}} (self, voltage)
+\item 
+def \mbox{\hyperlink{classsensor_backup_1_1_sensor_af8636d6a89396b8f2b05274a21fbfbab}{convert}} (self, outA)
+\item 
+def \mbox{\hyperlink{classsensor_backup_1_1_sensor_a5a2f2c2caa6ec28b5e1ec681444982b8}{measures}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsensor_backup_1_1_sensor_a5572a0b340a998db4dfae551992d9115}{average}}
+\item 
+\mbox{\hyperlink{classsensor_backup_1_1_sensor_a7a8e79be45ad0bb8bc532e7f05580be2}{temperature}}
+\item 
+\mbox{\hyperlink{classsensor_backup_1_1_sensor_aa8a66034a6dc69e30dd211e3ae608d87}{config\+Point}}
+\item 
+\mbox{\hyperlink{classsensor_backup_1_1_sensor_a1988b8cc0ccfb3da732424690cd17ee9}{kvalue}}
+\item 
+\mbox{\hyperlink{classsensor_backup_1_1_sensor_a1c9959cc79266238ef224d2f8e72b8f6}{oxygen\+Table}}
+\item 
+\mbox{\hyperlink{classsensor_backup_1_1_sensor_ae53089d0a67a6aef5752aaffd4488df6}{adc}}
+\item 
+\mbox{\hyperlink{classsensor_backup_1_1_sensor_ad5dc0b5b72347bcffe419743ae6f08b7}{file\+Controler}}
+\item 
+\mbox{\hyperlink{classsensor_backup_1_1_sensor_abbfd0e89a511d8720428d5c6c40d0d21}{neutral\+Voltage}}
+\item 
+\mbox{\hyperlink{classsensor_backup_1_1_sensor_a22c4d05c9965a007e73ffe08d4841409}{acid\+Voltage}}
+\item 
+\mbox{\hyperlink{classsensor_backup_1_1_sensor_a6e446deaf74fb6616beb1753fac532d4}{oxyvaluelow}}
+\item 
+\mbox{\hyperlink{classsensor_backup_1_1_sensor_ab2087010d462ee745bc85dd934544577}{oxyvalue\+High}}
+\item 
+\mbox{\hyperlink{classsensor_backup_1_1_sensor_a202b48a0c4cde6ff07b7e7d10b7ea133}{kvaluelow}}
+\item 
+\mbox{\hyperlink{classsensor_backup_1_1_sensor_a45c78fecea6189373fa7bb8169c9c524}{kvalue\+High}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_a5ec67ba9b58a558b40b6daf2450ec70f}\label{classsensor_backup_1_1_sensor_a5ec67ba9b58a558b40b6daf2450ec70f}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def sensor\+Backup.\+Sensor.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_aadc13b6eb4e865252dc15d4382a6de6a}\label{classsensor_backup_1_1_sensor_aadc13b6eb4e865252dc15d4382a6de6a}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!calibrateConductivity@{calibrateConductivity}}
+\index{calibrateConductivity@{calibrateConductivity}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{calibrateConductivity()}{calibrateConductivity()}}
+{\footnotesize\ttfamily def sensor\+Backup.\+Sensor.\+calibrate\+Conductivity (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{step }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_a470ea1b223fa2d398ac471350084cd14}\label{classsensor_backup_1_1_sensor_a470ea1b223fa2d398ac471350084cd14}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!calibrateOxygen@{calibrateOxygen}}
+\index{calibrateOxygen@{calibrateOxygen}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{calibrateOxygen()}{calibrateOxygen()}}
+{\footnotesize\ttfamily def sensor\+Backup.\+Sensor.\+calibrate\+Oxygen (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{step }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_ae61eaa1689584a408299d1a1dd54a130}\label{classsensor_backup_1_1_sensor_ae61eaa1689584a408299d1a1dd54a130}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!calibratePH@{calibratePH}}
+\index{calibratePH@{calibratePH}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{calibratePH()}{calibratePH()}}
+{\footnotesize\ttfamily def sensor\+Backup.\+Sensor.\+calibrate\+PH (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{step }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_aac113ac430164bd5db11fcd72b045b95}\label{classsensor_backup_1_1_sensor_aac113ac430164bd5db11fcd72b045b95}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!configSensor@{configSensor}}
+\index{configSensor@{configSensor}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{configSensor()}{configSensor()}}
+{\footnotesize\ttfamily def sensor\+Backup.\+Sensor.\+config\+Sensor (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{\+\_\+average }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_af8636d6a89396b8f2b05274a21fbfbab}\label{classsensor_backup_1_1_sensor_af8636d6a89396b8f2b05274a21fbfbab}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!convert@{convert}}
+\index{convert@{convert}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}}
+{\footnotesize\ttfamily def sensor\+Backup.\+Sensor.\+convert (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{outA }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_ac318234ccc2f4bcc978dade629a4b9b6}\label{classsensor_backup_1_1_sensor_ac318234ccc2f4bcc978dade629a4b9b6}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!convertConductivity@{convertConductivity}}
+\index{convertConductivity@{convertConductivity}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{convertConductivity()}{convertConductivity()}}
+{\footnotesize\ttfamily def sensor\+Backup.\+Sensor.\+convert\+Conductivity (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{voltage }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_af90344da8a0c33dfd6f29db206461942}\label{classsensor_backup_1_1_sensor_af90344da8a0c33dfd6f29db206461942}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!convertOxygen@{convertOxygen}}
+\index{convertOxygen@{convertOxygen}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{convertOxygen()}{convertOxygen()}}
+{\footnotesize\ttfamily def sensor\+Backup.\+Sensor.\+convert\+Oxygen (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{voltage }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_a0a2a6161f21131d3c4c0455aa6d1bca4}\label{classsensor_backup_1_1_sensor_a0a2a6161f21131d3c4c0455aa6d1bca4}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!convertPH@{convertPH}}
+\index{convertPH@{convertPH}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{convertPH()}{convertPH()}}
+{\footnotesize\ttfamily def sensor\+Backup.\+Sensor.\+convert\+PH (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{voltage }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_a2a7f23a24b275bd26a4c33405e6cbfde}\label{classsensor_backup_1_1_sensor_a2a7f23a24b275bd26a4c33405e6cbfde}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!doAverage@{doAverage}}
+\index{doAverage@{doAverage}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{doAverage()}{doAverage()}}
+{\footnotesize\ttfamily def sensor\+Backup.\+Sensor.\+do\+Average (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pin }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_a5a2f2c2caa6ec28b5e1ec681444982b8}\label{classsensor_backup_1_1_sensor_a5a2f2c2caa6ec28b5e1ec681444982b8}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!measures@{measures}}
+\index{measures@{measures}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{measures()}{measures()}}
+{\footnotesize\ttfamily def sensor\+Backup.\+Sensor.\+measures (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_aa89916999b27caa0bc4f4443f09eb9ba}\label{classsensor_backup_1_1_sensor_aa89916999b27caa0bc4f4443f09eb9ba}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!measureVoltage@{measureVoltage}}
+\index{measureVoltage@{measureVoltage}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{measureVoltage()}{measureVoltage()}}
+{\footnotesize\ttfamily def sensor\+Backup.\+Sensor.\+measure\+Voltage (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{outA }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_a04506925cd8cb5b7d37281b78e7b5116}\label{classsensor_backup_1_1_sensor_a04506925cd8cb5b7d37281b78e7b5116}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!waitStabilisation@{waitStabilisation}}
+\index{waitStabilisation@{waitStabilisation}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{waitStabilisation()}{waitStabilisation()}}
+{\footnotesize\ttfamily def sensor\+Backup.\+Sensor.\+wait\+Stabilisation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pin }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_a22c4d05c9965a007e73ffe08d4841409}\label{classsensor_backup_1_1_sensor_a22c4d05c9965a007e73ffe08d4841409}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!acidVoltage@{acidVoltage}}
+\index{acidVoltage@{acidVoltage}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{acidVoltage}{acidVoltage}}
+{\footnotesize\ttfamily sensor\+Backup.\+Sensor.\+acid\+Voltage}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_ae53089d0a67a6aef5752aaffd4488df6}\label{classsensor_backup_1_1_sensor_ae53089d0a67a6aef5752aaffd4488df6}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!adc@{adc}}
+\index{adc@{adc}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{adc}{adc}}
+{\footnotesize\ttfamily sensor\+Backup.\+Sensor.\+adc}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_a5572a0b340a998db4dfae551992d9115}\label{classsensor_backup_1_1_sensor_a5572a0b340a998db4dfae551992d9115}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!average@{average}}
+\index{average@{average}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{average}{average}}
+{\footnotesize\ttfamily sensor\+Backup.\+Sensor.\+average}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_aa8a66034a6dc69e30dd211e3ae608d87}\label{classsensor_backup_1_1_sensor_aa8a66034a6dc69e30dd211e3ae608d87}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!configPoint@{configPoint}}
+\index{configPoint@{configPoint}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{configPoint}{configPoint}}
+{\footnotesize\ttfamily sensor\+Backup.\+Sensor.\+config\+Point}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_ad5dc0b5b72347bcffe419743ae6f08b7}\label{classsensor_backup_1_1_sensor_ad5dc0b5b72347bcffe419743ae6f08b7}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!fileControler@{fileControler}}
+\index{fileControler@{fileControler}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{fileControler}{fileControler}}
+{\footnotesize\ttfamily sensor\+Backup.\+Sensor.\+file\+Controler}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_a1988b8cc0ccfb3da732424690cd17ee9}\label{classsensor_backup_1_1_sensor_a1988b8cc0ccfb3da732424690cd17ee9}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!kvalue@{kvalue}}
+\index{kvalue@{kvalue}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{kvalue}{kvalue}}
+{\footnotesize\ttfamily sensor\+Backup.\+Sensor.\+kvalue}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_a45c78fecea6189373fa7bb8169c9c524}\label{classsensor_backup_1_1_sensor_a45c78fecea6189373fa7bb8169c9c524}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!kvalueHigh@{kvalueHigh}}
+\index{kvalueHigh@{kvalueHigh}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{kvalueHigh}{kvalueHigh}}
+{\footnotesize\ttfamily sensor\+Backup.\+Sensor.\+kvalue\+High}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_a202b48a0c4cde6ff07b7e7d10b7ea133}\label{classsensor_backup_1_1_sensor_a202b48a0c4cde6ff07b7e7d10b7ea133}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!kvaluelow@{kvaluelow}}
+\index{kvaluelow@{kvaluelow}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{kvaluelow}{kvaluelow}}
+{\footnotesize\ttfamily sensor\+Backup.\+Sensor.\+kvaluelow}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_abbfd0e89a511d8720428d5c6c40d0d21}\label{classsensor_backup_1_1_sensor_abbfd0e89a511d8720428d5c6c40d0d21}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!neutralVoltage@{neutralVoltage}}
+\index{neutralVoltage@{neutralVoltage}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{neutralVoltage}{neutralVoltage}}
+{\footnotesize\ttfamily sensor\+Backup.\+Sensor.\+neutral\+Voltage}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_a1c9959cc79266238ef224d2f8e72b8f6}\label{classsensor_backup_1_1_sensor_a1c9959cc79266238ef224d2f8e72b8f6}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!oxygenTable@{oxygenTable}}
+\index{oxygenTable@{oxygenTable}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{oxygenTable}{oxygenTable}}
+{\footnotesize\ttfamily sensor\+Backup.\+Sensor.\+oxygen\+Table}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_ab2087010d462ee745bc85dd934544577}\label{classsensor_backup_1_1_sensor_ab2087010d462ee745bc85dd934544577}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!oxyvalueHigh@{oxyvalueHigh}}
+\index{oxyvalueHigh@{oxyvalueHigh}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{oxyvalueHigh}{oxyvalueHigh}}
+{\footnotesize\ttfamily sensor\+Backup.\+Sensor.\+oxyvalue\+High}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_a6e446deaf74fb6616beb1753fac532d4}\label{classsensor_backup_1_1_sensor_a6e446deaf74fb6616beb1753fac532d4}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!oxyvaluelow@{oxyvaluelow}}
+\index{oxyvaluelow@{oxyvaluelow}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{oxyvaluelow}{oxyvaluelow}}
+{\footnotesize\ttfamily sensor\+Backup.\+Sensor.\+oxyvaluelow}
+
+\mbox{\Hypertarget{classsensor_backup_1_1_sensor_a7a8e79be45ad0bb8bc532e7f05580be2}\label{classsensor_backup_1_1_sensor_a7a8e79be45ad0bb8bc532e7f05580be2}} 
+\index{sensorBackup.Sensor@{sensorBackup.Sensor}!temperature@{temperature}}
+\index{temperature@{temperature}!sensorBackup.Sensor@{sensorBackup.Sensor}}
+\doxysubsubsection{\texorpdfstring{temperature}{temperature}}
+{\footnotesize\ttfamily sensor\+Backup.\+Sensor.\+temperature}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+script/\+Server/backup/\mbox{\hyperlink{sensor_backup_8py}{sensor\+Backup.\+py}}\end{DoxyCompactItemize}

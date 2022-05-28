@@ -32,7 +32,7 @@ def \mbox{\hyperlink{class_b_d_d_1_1_b_d_d_a1650c7aef228448f4aab24cc8385099d}{de
 
 \doxysubsection{Detailed Description}
 \begin{DoxyVerb}BDD object
-manage the BDD table capteur
+permit to connect to the BDD
 \end{DoxyVerb}
  
 
@@ -54,13 +54,13 @@ manage the BDD table capteur
 \doxysubsubsection{\texorpdfstring{closeBDD()}{closeBDD()}}
 {\footnotesize\ttfamily def BDD.\+BDD.\+close\+BDD (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{connection }\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}close connection to BDD
+\begin{DoxyVerb}close the connection
 
 Args:
-    connection (str): the connection already make
+    connection (pymysql): connection
 
 Returns:
-    str: connection end
+    pymysql: return the connection null
 \end{DoxyVerb}
  \mbox{\Hypertarget{class_b_d_d_1_1_b_d_d_af654c43308d590aca073ec711488375e}\label{class_b_d_d_1_1_b_d_d_af654c43308d590aca073ec711488375e}} 
 \index{BDD.BDD@{BDD.BDD}!configBDD@{configBDD}}
@@ -68,13 +68,13 @@ Returns:
 \doxysubsubsection{\texorpdfstring{configBDD()}{configBDD()}}
 {\footnotesize\ttfamily def BDD.\+BDD.\+config\+BDD (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{\+\_\+host,  }\item[{}]{\+\_\+user,  }\item[{}]{\+\_\+password,  }\item[{}]{\+\_\+database }\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}configuration of the BDD
+\begin{DoxyVerb}configure the BDD
 
 Args:
-    _host (str): host of the user
+    _host (str): host of the BDD
     _user (str): name of the user
     _password (str): password to connect the user
-    _database (str): name of the database choosen
+    _database (str): name of the database
 \end{DoxyVerb}
  \mbox{\Hypertarget{class_b_d_d_1_1_b_d_d_a3fd9f770f266207e67015d1a3f626287}\label{class_b_d_d_1_1_b_d_d_a3fd9f770f266207e67015d1a3f626287}} 
 \index{BDD.BDD@{BDD.BDD}!connectionBDD@{connectionBDD}}
@@ -85,7 +85,7 @@ Args:
 \begin{DoxyVerb}connection to the BDD
 
 Returns:
-    str: connecion to BDD to make request
+    pymysql: connection
 \end{DoxyVerb}
  \mbox{\Hypertarget{class_b_d_d_1_1_b_d_d_a1650c7aef228448f4aab24cc8385099d}\label{class_b_d_d_1_1_b_d_d_a1650c7aef228448f4aab24cc8385099d}} 
 \index{BDD.BDD@{BDD.BDD}!deleteValue@{deleteValue}}
@@ -93,7 +93,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{deleteValue()}{deleteValue()}}
 {\footnotesize\ttfamily def BDD.\+BDD.\+delete\+Value (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}delete data from the BDD
+\begin{DoxyVerb}delete some values of the BDD
 \end{DoxyVerb}
  \mbox{\Hypertarget{class_b_d_d_1_1_b_d_d_afc696e664909b3eb88e319c15a9e3aba}\label{class_b_d_d_1_1_b_d_d_afc696e664909b3eb88e319c15a9e3aba}} 
 \index{BDD.BDD@{BDD.BDD}!getBDD@{getBDD}}
@@ -101,7 +101,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{getBDD()}{getBDD()}}
 {\footnotesize\ttfamily def BDD.\+BDD.\+get\+BDD (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}get every data from the BDD
+\begin{DoxyVerb}get information of the BDD
 \end{DoxyVerb}
  \mbox{\Hypertarget{class_b_d_d_1_1_b_d_d_ad2cc303af6d254bd39ef327b31c951a9}\label{class_b_d_d_1_1_b_d_d_ad2cc303af6d254bd39ef327b31c951a9}} 
 \index{BDD.BDD@{BDD.BDD}!inssertBDD@{inssertBDD}}
@@ -109,10 +109,7 @@ Returns:
 \doxysubsubsection{\texorpdfstring{inssertBDD()}{inssertBDD()}}
 {\footnotesize\ttfamily def BDD.\+BDD.\+inssert\+BDD (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sortieA }\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}insert data into BDD
-
-Args:
-    sortieA (array): values of the sensors
+\begin{DoxyVerb}insert data inside BDD
 \end{DoxyVerb}
  
 
@@ -145,4 +142,4 @@ Args:
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_b_d_d_8py}{BDD.\+py}}\end{DoxyCompactItemize}
+script/\+Client/\mbox{\hyperlink{_b_d_d_8py}{BDD.\+py}}\end{DoxyCompactItemize}

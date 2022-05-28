@@ -20,9 +20,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ROV.png"/></td>
   <td id="projectalign">
-   <div id="projectname">BlueRov
+   <div id="projectname">BlueRov<span id="projectnumber">&#160;v1</span>
    </div>
+   <div id="projectbrief">a submarine robot project</div>
   </td>
  </tr>
  </tbody>
@@ -98,6 +100,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4492e6f50266701c91611c0e3263c312"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a576bafbbc816a6640910153bd68b4c6d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_client_1_1_client.html#a576bafbbc816a6640910153bd68b4c6d">servo</a> (self)</td></tr>
 <tr class="separator:a576bafbbc816a6640910153bd68b4c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b944f8e97bd968815627d79aaa1318d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_client_1_1_client.html#a4b944f8e97bd968815627d79aaa1318d">camera</a> (self)</td></tr>
+<tr class="separator:a4b944f8e97bd968815627d79aaa1318d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f9760742bba32d9c750ecb63290e018"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_client_1_1_client.html#a7f9760742bba32d9c750ecb63290e018">controler</a> (self, message)</td></tr>
 <tr class="separator:a7f9760742bba32d9c750ecb63290e018"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28cde388cd6ec48bab50ac9cda797d78"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_client_1_1_client.html#a28cde388cd6ec48bab50ac9cda797d78">execute</a> (self, message)</td></tr>
@@ -118,10 +122,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a4756b9db787766f76c0c41f647982c92"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_client_1_1_client.html#a4756b9db787766f76c0c41f647982c92">fileControler</a></td></tr>
 <tr class="separator:a4756b9db787766f76c0c41f647982c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Client object
-manage the TCPIP client connection
-</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afcfa9526700b69526d7685df31e93f04" name="afcfa9526700b69526d7685df31e93f04"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afcfa9526700b69526d7685df31e93f04">&#9670;&nbsp;</a></span>__init__()</h2>
 
@@ -137,8 +138,7 @@ manage the TCPIP client connection
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Constructor
-</pre> 
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -157,8 +157,25 @@ manage the TCPIP client connection
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">general function to calibrate the sensor
-</pre> 
+
+</div>
+</div>
+<a id="a4b944f8e97bd968815627d79aaa1318d" name="a4b944f8e97bd968815627d79aaa1318d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b944f8e97bd968815627d79aaa1318d">&#9670;&nbsp;</a></span>camera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Client.Client.camera </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <a id="aa8a98a75730000a6d497561043575aef" name="aa8a98a75730000a6d497561043575aef"></a>
@@ -192,12 +209,7 @@ manage the TCPIP client connection
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">configuration of the client
 
-Args:
-    _HOST (str): ip adress of the connection
-    _PORT (str): port adress of the connection
-</pre> 
 </div>
 </div>
 <a id="afc63013b4646a61c51e1c671acc27e82" name="afc63013b4646a61c51e1c671acc27e82"></a>
@@ -215,8 +227,7 @@ Args:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">connection to the Server
-</pre> 
+
 </div>
 </div>
 <a id="a7f9760742bba32d9c750ecb63290e018" name="a7f9760742bba32d9c750ecb63290e018"></a>
@@ -244,11 +255,7 @@ Args:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Controler to manage the Client
 
-Args:
-    message (str): command
-</pre> 
 </div>
 </div>
 <a id="a1d0a9ebccf0c48d8ad5958f6cb032dd8" name="a1d0a9ebccf0c48d8ad5958f6cb032dd8"></a>
@@ -276,14 +283,7 @@ Args:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">decomposed the command to an array
 
-Args:
-    string (str): command string
-
-Returns:
-    array: command decomposed
-</pre> 
 </div>
 </div>
 <a id="a6928e5df14d958a1284a175b84583361" name="a6928e5df14d958a1284a175b84583361"></a>
@@ -301,8 +301,7 @@ Returns:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">deconnection with the Server
-</pre> 
+
 </div>
 </div>
 <a id="a28cde388cd6ec48bab50ac9cda797d78" name="a28cde388cd6ec48bab50ac9cda797d78"></a>
@@ -330,11 +329,7 @@ Returns:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">general function for connection with the Server
 
-Args:
-    message (str): command
-</pre> 
 </div>
 </div>
 <a id="a290855bb1263e260f8f2464d749b5d5a" name="a290855bb1263e260f8f2464d749b5d5a"></a>
@@ -352,8 +347,7 @@ Args:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">general function to get one data
-</pre> 
+
 </div>
 </div>
 <a id="a68862383760e647eae5ce96b9a791f82" name="a68862383760e647eae5ce96b9a791f82"></a>
@@ -371,8 +365,7 @@ Args:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">general function to get data in RT
-</pre> 
+
 </div>
 </div>
 <a id="ab37fd481f4c0c0840b471d60dec8dc3a" name="ab37fd481f4c0c0840b471d60dec8dc3a"></a>
@@ -390,11 +383,7 @@ Args:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">receave message from server
 
-Returns:
-    str: message receave
-</pre> 
 </div>
 </div>
 <a id="ac3116ded94f01f6f75c58c12a0f64665" name="ac3116ded94f01f6f75c58c12a0f64665"></a>
@@ -422,11 +411,7 @@ Returns:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">send any message to the Server
 
-Args:
-    message (str): message send
-</pre> 
 </div>
 </div>
 <a id="a576bafbbc816a6640910153bd68b4c6d" name="a576bafbbc816a6640910153bd68b4c6d"></a>
@@ -444,8 +429,7 @@ Args:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">general function to control the servo
-</pre> 
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -534,7 +518,7 @@ Args:
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="_client_8py.html">Client.py</a></li>
+<li>script/Client/<a class="el" href="_client_8py.html">Client.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

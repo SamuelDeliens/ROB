@@ -20,9 +20,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ROV.png"/></td>
   <td id="projectalign">
-   <div id="projectname">BlueRov
+   <div id="projectname">BlueRov<span id="projectnumber">&#160;v1</span>
    </div>
+   <div id="projectbrief">a submarine robot project</div>
   </td>
  </tr>
  </tbody>
@@ -104,7 +106,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">BDD object
-manage the BDD table capteur
+permit to connect to the BDD
 </pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a389b8c21884859b06d5c2e0d1c7f7db7" name="a389b8c21884859b06d5c2e0d1c7f7db7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a389b8c21884859b06d5c2e0d1c7f7db7">&#9670;&nbsp;</a></span>__init__()</h2>
@@ -151,13 +153,13 @@ manage the BDD table capteur
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">close connection to BDD
+<pre class="fragment">close the connection
 
 Args:
-    connection (str): the connection already make
+    connection (pymysql): connection
 
 Returns:
-    str: connection end
+    pymysql: return the connection null
 </pre> 
 </div>
 </div>
@@ -204,13 +206,13 @@ Returns:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">configuration of the BDD
+<pre class="fragment">configure the BDD
 
 Args:
-    _host (str): host of the user
+    _host (str): host of the BDD
     _user (str): name of the user
     _password (str): password to connect the user
-    _database (str): name of the database choosen
+    _database (str): name of the database
 </pre> 
 </div>
 </div>
@@ -232,7 +234,7 @@ Args:
 <pre class="fragment">connection to the BDD
 
 Returns:
-    str: connecion to BDD to make request
+    pymysql: connection
 </pre> 
 </div>
 </div>
@@ -251,7 +253,7 @@ Returns:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">delete data from the BDD
+<pre class="fragment">delete some values of the BDD
 </pre> 
 </div>
 </div>
@@ -270,7 +272,7 @@ Returns:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">get every data from the BDD
+<pre class="fragment">get information of the BDD
 </pre> 
 </div>
 </div>
@@ -299,10 +301,7 @@ Returns:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">insert data into BDD
-
-Args:
-    sortieA (array): values of the sensors
+<pre class="fragment">insert data inside BDD
 </pre> 
 </div>
 </div>
@@ -364,7 +363,7 @@ Args:
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="_b_d_d_8py.html">BDD.py</a></li>
+<li>script/Client/<a class="el" href="_b_d_d_8py.html">BDD.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

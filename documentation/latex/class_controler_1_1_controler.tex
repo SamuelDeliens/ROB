@@ -17,6 +17,8 @@ def \mbox{\hyperlink{class_controler_1_1_controler_a0addcdf9740e13c617fbb87acf61
 \item 
 def \mbox{\hyperlink{class_controler_1_1_controler_a207f39c453d3e1c2b904fc486894ae22}{servo\+Controler}} (self, command)
 \item 
+def \mbox{\hyperlink{class_controler_1_1_controler_a99da9d4c20542c0313a2d07837ab5e43}{camera\+Controler}} (self, command)
+\item 
 def \mbox{\hyperlink{class_controler_1_1_controler_a5b8ee5fb1d49f5b1e0c52a1972a24641}{controler\+Command}} (self, command)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
@@ -60,9 +62,23 @@ Args:
 
 Args:
     command (str): type and step for the calibration
-
+    
 Returns:
     str: calibration progress
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_controler_1_1_controler_a99da9d4c20542c0313a2d07837ab5e43}\label{class_controler_1_1_controler_a99da9d4c20542c0313a2d07837ab5e43}} 
+\index{Controler.Controler@{Controler.Controler}!cameraControler@{cameraControler}}
+\index{cameraControler@{cameraControler}!Controler.Controler@{Controler.Controler}}
+\doxysubsubsection{\texorpdfstring{cameraControler()}{cameraControler()}}
+{\footnotesize\ttfamily def Controler.\+Controler.\+camera\+Controler (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{command }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Controler to camera
+
+Args:
+    command (str): type and action to start and stop the camera
+
+Returns:
+    str: Done
 \end{DoxyVerb}
  \mbox{\Hypertarget{class_controler_1_1_controler_a5b8ee5fb1d49f5b1e0c52a1972a24641}\label{class_controler_1_1_controler_a5b8ee5fb1d49f5b1e0c52a1972a24641}} 
 \index{Controler.Controler@{Controler.Controler}!controlerCommand@{controlerCommand}}
@@ -74,7 +90,7 @@ Returns:
 
 Args:
     command (str): Full command
-
+    
 Returns:
     str: progress
 \end{DoxyVerb}
@@ -88,7 +104,7 @@ Returns:
 
 Args:
     continu (bool): permit to stop the RT
-
+    
 Returns:
     str: End
 \end{DoxyVerb}
@@ -121,7 +137,7 @@ Returns:
 
 Args:
     message (str): message send to client
-
+    
 Returns:
     str: Error
 \end{DoxyVerb}
@@ -135,7 +151,7 @@ Returns:
 
 Args:
     command (str): type and angle for rotate servomotor
-
+    
 Returns:
     str: End
 \end{DoxyVerb}
@@ -158,4 +174,4 @@ Returns:
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_controler_8py}{Controler.\+py}}\end{DoxyCompactItemize}
+script/\+Server/\mbox{\hyperlink{_controler_8py}{Controler.\+py}}\end{DoxyCompactItemize}
