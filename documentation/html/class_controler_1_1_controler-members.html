@@ -20,9 +20,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ROV.png"/></td>
   <td id="projectalign">
-   <div id="projectname">BlueRov
+   <div id="projectname">BlueRov<span id="projectnumber">&#160;v1</span>
    </div>
+   <div id="projectbrief">a submarine robot project</div>
   </td>
  </tr>
  </tbody>
@@ -75,13 +77,14 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#a29a3cbc7b77e3110de790a386d3a29fd">__init__</a>(self, client_, adressClient_)</td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#ac22cbbe60d41dded742b3153263e7588">adressClient</a></td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#a0addcdf9740e13c617fbb87acf6141fe">calibrate</a>(self, command)</td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#a96371b980053879b30a7e5999ec2db6b">client</a></td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#a5b8ee5fb1d49f5b1e0c52a1972a24641">controlerCommand</a>(self, command)</td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#ae7591585dd4629588c4fb88718719313">getRTcontroler</a>(self, continu)</td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#a9f4f12a8d06efa4c916b8c928e4ad467">initConfig</a>(self)</td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#a4f4bd1fe4dff099d64e21b174f4a159d">listening</a>(self)</td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#a8963154c11278efdf24e93278b7ef5e2">sending</a>(self, message)</td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#a207f39c453d3e1c2b904fc486894ae22">servoControler</a>(self, command)</td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#a99da9d4c20542c0313a2d07837ab5e43">cameraControler</a>(self, command)</td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#a96371b980053879b30a7e5999ec2db6b">client</a></td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#a5b8ee5fb1d49f5b1e0c52a1972a24641">controlerCommand</a>(self, command)</td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#ae7591585dd4629588c4fb88718719313">getRTcontroler</a>(self, continu)</td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#a9f4f12a8d06efa4c916b8c928e4ad467">initConfig</a>(self)</td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#a4f4bd1fe4dff099d64e21b174f4a159d">listening</a>(self)</td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#a8963154c11278efdf24e93278b7ef5e2">sending</a>(self, message)</td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_controler_1_1_controler.html#a207f39c453d3e1c2b904fc486894ae22">servoControler</a>(self, command)</td><td class="entry"><a class="el" href="class_controler_1_1_controler.html">Controler.Controler</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

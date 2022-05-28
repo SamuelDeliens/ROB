@@ -3,6 +3,14 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+def \mbox{\hyperlink{class_file_controler_1_1_file_controler_abb08b80774ac4fe47520faaae419a819}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{class_file_controler_1_1_file_controler_ab8fc3f61d4c801c37096b22343c51a0f}{write\+File}} (self, status)
+\item 
+def \mbox{\hyperlink{class_file_controler_1_1_file_controler_af71e832ab67aef775d03a65a42a4422a}{read\+File}} (self)
+\item 
+def \mbox{\hyperlink{class_file_controler_1_1_file_controler_a08802f54a662bf2801462201e5348f74}{write\+Status}} (self, typeS, new\+Status)
+\item 
 def \mbox{\hyperlink{class_file_controler_1_1_file_controler_ae1f971bb26efb53f8ccb7e8b6aa93bb4}{write\+File}} (cls, data)
 \item 
 def \mbox{\hyperlink{class_file_controler_1_1_file_controler_ac72af4ef447b4ed5b20cf0093f6cc164}{read\+File}} (cls)
@@ -11,10 +19,15 @@ def \mbox{\hyperlink{class_file_controler_1_1_file_controler_ad6a2e33ca37608b205
 \item 
 def \mbox{\hyperlink{class_file_controler_1_1_file_controler_a184416247520d10c5d799ba319e008b8}{write\+Part\+Part\+File}} (cls, part1, part2, data)
 \end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_file_controler_1_1_file_controler_a806c02da48eb7ed8907a0058d85483bd}{path\+File}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-string \mbox{\hyperlink{class_file_controler_1_1_file_controler_a85cd79b2698d991693afd413761f9bcb}{path\+File}} = \char`\"{}data.\+json\char`\"{}
+string \mbox{\hyperlink{class_file_controler_1_1_file_controler_a85cd79b2698d991693afd413761f9bcb}{path\+File}} = \char`\"{}/home/pi/Desktop/ROB/Server/data.\+json\char`\"{}
 \end{DoxyCompactItemize}
 
 
@@ -23,12 +36,34 @@ string \mbox{\hyperlink{class_file_controler_1_1_file_controler_a85cd79b2698d991
 \end{DoxyVerb}
  
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_file_controler_1_1_file_controler_abb08b80774ac4fe47520faaae419a819}\label{class_file_controler_1_1_file_controler_abb08b80774ac4fe47520faaae419a819}} 
+\index{FileControler.FileControler@{FileControler.FileControler}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!FileControler.FileControler@{FileControler.FileControler}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def File\+Controler.\+File\+Controler.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Constructor
+\end{DoxyVerb}
+ 
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_file_controler_1_1_file_controler_ac72af4ef447b4ed5b20cf0093f6cc164}\label{class_file_controler_1_1_file_controler_ac72af4ef447b4ed5b20cf0093f6cc164}} 
 \index{FileControler.FileControler@{FileControler.FileControler}!readFile@{readFile}}
 \index{readFile@{readFile}!FileControler.FileControler@{FileControler.FileControler}}
-\doxysubsubsection{\texorpdfstring{readFile()}{readFile()}}
+\doxysubsubsection{\texorpdfstring{readFile()}{readFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily def File\+Controler.\+File\+Controler.\+read\+File (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}read the data file
+
+Returns:
+    str: data in the file
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_file_controler_1_1_file_controler_af71e832ab67aef775d03a65a42a4422a}\label{class_file_controler_1_1_file_controler_af71e832ab67aef775d03a65a42a4422a}} 
+\index{FileControler.FileControler@{FileControler.FileControler}!readFile@{readFile}}
+\index{readFile@{readFile}!FileControler.FileControler@{FileControler.FileControler}}
+\doxysubsubsection{\texorpdfstring{readFile()}{readFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def File\+Controler.\+File\+Controler.\+read\+File (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
 
 \begin{DoxyVerb}read the data file
 
@@ -38,13 +73,24 @@ Returns:
  \mbox{\Hypertarget{class_file_controler_1_1_file_controler_ae1f971bb26efb53f8ccb7e8b6aa93bb4}\label{class_file_controler_1_1_file_controler_ae1f971bb26efb53f8ccb7e8b6aa93bb4}} 
 \index{FileControler.FileControler@{FileControler.FileControler}!writeFile@{writeFile}}
 \index{writeFile@{writeFile}!FileControler.FileControler@{FileControler.FileControler}}
-\doxysubsubsection{\texorpdfstring{writeFile()}{writeFile()}}
+\doxysubsubsection{\texorpdfstring{writeFile()}{writeFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily def File\+Controler.\+File\+Controler.\+write\+File (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{data }\end{DoxyParamCaption})}
 
 \begin{DoxyVerb}change the data file
 
 Args:
     data (str): new data to save
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_file_controler_1_1_file_controler_ab8fc3f61d4c801c37096b22343c51a0f}\label{class_file_controler_1_1_file_controler_ab8fc3f61d4c801c37096b22343c51a0f}} 
+\index{FileControler.FileControler@{FileControler.FileControler}!writeFile@{writeFile}}
+\index{writeFile@{writeFile}!FileControler.FileControler@{FileControler.FileControler}}
+\doxysubsubsection{\texorpdfstring{writeFile()}{writeFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def File\+Controler.\+File\+Controler.\+write\+File (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{status }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}change the data file
+
+Args:
+    status (str): new status to save
 \end{DoxyVerb}
  \mbox{\Hypertarget{class_file_controler_1_1_file_controler_ad6a2e33ca37608b2050bf7d7f06a4405}\label{class_file_controler_1_1_file_controler_ad6a2e33ca37608b2050bf7d7f06a4405}} 
 \index{FileControler.FileControler@{FileControler.FileControler}!writePartFile@{writePartFile}}
@@ -71,17 +117,36 @@ Args:
     part2 (str): the secon part to write
     data (str): new data to save
 \end{DoxyVerb}
+ \mbox{\Hypertarget{class_file_controler_1_1_file_controler_a08802f54a662bf2801462201e5348f74}\label{class_file_controler_1_1_file_controler_a08802f54a662bf2801462201e5348f74}} 
+\index{FileControler.FileControler@{FileControler.FileControler}!writeStatus@{writeStatus}}
+\index{writeStatus@{writeStatus}!FileControler.FileControler@{FileControler.FileControler}}
+\doxysubsubsection{\texorpdfstring{writeStatus()}{writeStatus()}}
+{\footnotesize\ttfamily def File\+Controler.\+File\+Controler.\+write\+Status (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{typeS,  }\item[{}]{new\+Status }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}write a part in the json data
+
+Args:
+    typeS (str): the type to write
+    newStatus (str): new status to save
+\end{DoxyVerb}
  
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_file_controler_1_1_file_controler_a806c02da48eb7ed8907a0058d85483bd}\label{class_file_controler_1_1_file_controler_a806c02da48eb7ed8907a0058d85483bd}} 
+\index{FileControler.FileControler@{FileControler.FileControler}!pathFile@{pathFile}}
+\index{pathFile@{pathFile}!FileControler.FileControler@{FileControler.FileControler}}
+\doxysubsubsection{\texorpdfstring{pathFile}{pathFile}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily File\+Controler.\+File\+Controler.\+path\+File}
+
 \mbox{\Hypertarget{class_file_controler_1_1_file_controler_a85cd79b2698d991693afd413761f9bcb}\label{class_file_controler_1_1_file_controler_a85cd79b2698d991693afd413761f9bcb}} 
 \index{FileControler.FileControler@{FileControler.FileControler}!pathFile@{pathFile}}
 \index{pathFile@{pathFile}!FileControler.FileControler@{FileControler.FileControler}}
-\doxysubsubsection{\texorpdfstring{pathFile}{pathFile}}
-{\footnotesize\ttfamily string File\+Controler.\+File\+Controler.\+path\+File = \char`\"{}data.\+json\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+\doxysubsubsection{\texorpdfstring{pathFile}{pathFile}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string File\+Controler.\+File\+Controler.\+path\+File = \char`\"{}/home/pi/Desktop/ROB/Server/data.\+json\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_file_controler_8py}{File\+Controler.\+py}}\end{DoxyCompactItemize}
+script/\+Client/\mbox{\hyperlink{_client_2_file_controler_8py}{File\+Controler.\+py}}\item 
+script/\+Server/\mbox{\hyperlink{_server_2_file_controler_8py}{File\+Controler.\+py}}\end{DoxyCompactItemize}

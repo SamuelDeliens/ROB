@@ -20,9 +20,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ROV.png"/></td>
   <td id="projectalign">
-   <div id="projectname">BlueRov
+   <div id="projectname">BlueRov<span id="projectnumber">&#160;v1</span>
    </div>
+   <div id="projectbrief">a submarine robot project</div>
   </td>
  </tr>
  </tbody>
@@ -90,6 +92,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0addcdf9740e13c617fbb87acf6141fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a207f39c453d3e1c2b904fc486894ae22"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controler_1_1_controler.html#a207f39c453d3e1c2b904fc486894ae22">servoControler</a> (self, command)</td></tr>
 <tr class="separator:a207f39c453d3e1c2b904fc486894ae22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99da9d4c20542c0313a2d07837ab5e43"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controler_1_1_controler.html#a99da9d4c20542c0313a2d07837ab5e43">cameraControler</a> (self, command)</td></tr>
+<tr class="separator:a99da9d4c20542c0313a2d07837ab5e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b8ee5fb1d49f5b1e0c52a1972a24641"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controler_1_1_controler.html#a5b8ee5fb1d49f5b1e0c52a1972a24641">controlerCommand</a> (self, command)</td></tr>
 <tr class="separator:a5b8ee5fb1d49f5b1e0c52a1972a24641"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -173,9 +177,44 @@ Args:
 
 Args:
     command (str): type and step for the calibration
-
+    
 Returns:
     str: calibration progress
+</pre> 
+</div>
+</div>
+<a id="a99da9d4c20542c0313a2d07837ab5e43" name="a99da9d4c20542c0313a2d07837ab5e43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99da9d4c20542c0313a2d07837ab5e43">&#9670;&nbsp;</a></span>cameraControler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Controler.Controler.cameraControler </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>command</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Controler to camera
+
+Args:
+    command (str): type and action to start and stop the camera
+
+Returns:
+    str: Done
 </pre> 
 </div>
 </div>
@@ -208,7 +247,7 @@ Returns:
 
 Args:
     command (str): Full command
-
+    
 Returns:
     str: progress
 </pre> 
@@ -243,7 +282,7 @@ Returns:
 
 Args:
     continu (bool): permit to stop the RT
-
+    
 Returns:
     str: End
 </pre> 
@@ -319,7 +358,7 @@ Returns:
 
 Args:
     message (str): message send to client
-
+    
 Returns:
     str: Error
 </pre> 
@@ -354,7 +393,7 @@ Returns:
 
 Args:
     command (str): type and angle for rotate servomotor
-
+    
 Returns:
     str: End
 </pre> 
@@ -390,7 +429,7 @@ Returns:
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="_controler_8py.html">Controler.py</a></li>
+<li>script/Server/<a class="el" href="_controler_8py.html">Controler.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

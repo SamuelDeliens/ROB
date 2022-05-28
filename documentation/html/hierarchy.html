@@ -20,9 +20,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="ROV.png"/></td>
   <td id="projectalign">
-   <div id="projectname">BlueRov
+   <div id="projectname">BlueRov<span id="projectnumber">&#160;v1</span>
    </div>
+   <div id="projectbrief">a submarine robot project</div>
   </td>
  </tr>
  </tbody>
@@ -69,15 +71,16 @@ $(function() {
 <div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span>]</div><table class="directory">
 <tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_actioner_1_1_actioner.html" target="_self">Actioner.Actioner</a></td><td class="desc"></td></tr>
 <tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_b_d_d_1_1_b_d_d.html" target="_self">BDD.BDD</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_client_1_1_client.html" target="_self">Client.Client</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_controler_1_1_controler.html" target="_self">Controler.Controler</a></td><td class="desc"></td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_file_controler_1_1_file_controler.html" target="_self">FileControler.FileControler</a></td><td class="desc"></td></tr>
-<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_m_c_p3008_1_1_m_c_p3008.html" target="_self">MCP3008.MCP3008</a></td><td class="desc"></td></tr>
-<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor_1_1_sensor.html" target="_self">Sensor.Sensor</a></td><td class="desc"></td></tr>
-<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_server_1_1_server.html" target="_self">Server.Server</a></td><td class="desc"></td></tr>
-<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_servo_motor_1_1_servo_motor.html" target="_self">ServoMotor.ServoMotor</a></td><td class="desc"></td></tr>
-<tr id="row_9_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_9_" class="arrow" onclick="toggleFolder('9_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><b>Thread</b></td><td class="desc"></td></tr>
-<tr id="row_9_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_thread_client_1_1_thread_client.html" target="_self">ThreadClient.ThreadClient</a></td><td class="desc"></td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_camera_1_1_camera.html" target="_self">Camera.Camera</a></td><td class="desc"></td></tr>
+<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_client_1_1_client.html" target="_self">Client.Client</a></td><td class="desc"></td></tr>
+<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_controler_1_1_controler.html" target="_self">Controler.Controler</a></td><td class="desc"></td></tr>
+<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_file_controler_1_1_file_controler.html" target="_self">FileControler.FileControler</a></td><td class="desc"></td></tr>
+<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_m_c_p3008_1_1_m_c_p3008.html" target="_self">MCP3008.MCP3008</a></td><td class="desc"></td></tr>
+<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor_1_1_sensor.html" target="_self">Sensor.Sensor</a></td><td class="desc"></td></tr>
+<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_server_1_1_server.html" target="_self">Server.Server</a></td><td class="desc"></td></tr>
+<tr id="row_9_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_servo_motor_1_1_servo_motor.html" target="_self">ServoMotor.ServoMotor</a></td><td class="desc"></td></tr>
+<tr id="row_10_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_10_" class="arrow" onclick="toggleFolder('10_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><b>Thread</b></td><td class="desc"></td></tr>
+<tr id="row_10_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_thread_client_1_1_thread_client.html" target="_self">ThreadClient.ThreadClient</a></td><td class="desc"></td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
