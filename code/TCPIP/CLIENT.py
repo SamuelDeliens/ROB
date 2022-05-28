@@ -4,9 +4,6 @@
 
 import socket
 import time
-import datetime
-
-import pymysql.cursors
 
 from BDD import BDD
 from FileControler import FileControler

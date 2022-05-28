@@ -9,8 +9,14 @@ from FileControler import FileControler
 
 
 class ServoMotor :
+    """Servo object
+    manage the position of the camera
+    """
     
     def __init__(self):
+        """Constructor
+        define servo with default parameter
+        """
         self.calibParam = {"port": 12, "mini_angle": 0, "maxi_angle": 180, "minPWM": 0.4/1000, "maxPWM": 2.4/1000}
         self.angle = float(FileControler.readFile()["servo"]["angle"])
         self.speed = float(FileControler.readFile()["servo"]["speed"])
@@ -21,6 +27,11 @@ class ServoMotor :
 # --------------------- Config -------------------------
 
     def configServo(self, newCalibParam):
+        """configure the servomotor
+        
+        Args:
+            newCalibParam (dict): new calibration parameter
+        """
         self.calibParam = newCalibParam
         self.servo = AngularServo(self.calibParam["port"], min_angle=self.calibParam["mini_angle"], max_angle=self.calibParam["maxi_angle"], min_pulse_width=self.calibParam["minPWM"], max_pulse_width=self.calibParam["maxPWM"])
 
@@ -28,6 +39,11 @@ class ServoMotor :
 # --------------------- Rotation -------------------------
         
     def rotateDirect(self, angle):
+        """direct rotation with angle
+        
+        Args:
+            angle (int): new angle of the servo
+        """
         print(angle)
         self.servo.angle = angle
         self.angle = self.servo.angle
@@ -37,6 +53,11 @@ class ServoMotor :
         self.servo.detach()
         
     def rotateSlow(self, angle):
+        """slow rotation with direction angle
+        
+        Args:
+            angle (int): direction of the rotation
+        """
         self.servo.angle = self.angle
         continu = "continu"
         while continu == "continu" and (angle == 1 or self.servo.angle > 0.0) and (angle == -1 or self.servo.angle < 180.0):

@@ -3,7 +3,6 @@
 #------------------------------------------------------
 
 import sys
-import socket
 
 sys.path.append("/var/www/html/assets/python")
 print(sys.path)
