@@ -12,9 +12,12 @@ from Client import Client
 from BDD import BDD
 from FileControler import FileControler
 
-type_ = sys.argv[1]
-action_ = sys.argv[2]
-step_ = sys.argv[3]
+if len(sys.argv) > 1:
+    type_ = sys.argv[1]
+if len(sys.argv) > 2:
+    action_ = sys.argv[2]
+if len(sys.argv) > 3:
+    step_ = sys.argv[3]
 
 client = Client()
 fileControler = FileControler()
@@ -33,11 +36,14 @@ def controler():
             fileControler.writeStatus("GETRT", "continu")
             client.execute("GETRT")
         elif(action_ == "stop"):
-            fileControler.writeFile("stop")
+            fileControler.writeStatus("GETRT", "stop")
     elif(type_ == "CALIBRATE"):
         client.execute("CALIBRATE "+ action_ +" "+ step_)
     elif(type_ == "SERVO"):
         client.execute("SERVO "+ action_ +" "+ step_)
+    elif(type_ == "CAMERA"):
+        print("here")
+        client.execute("CAMERA "+ action_)
 
 # --------------------- SCRIPT -------------------------
 

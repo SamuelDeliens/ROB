@@ -1,7 +1,9 @@
 function startCalibration() {
     document.isLaunch = true;
     displayCalibration(document.isLaunch);
-    calibrate("CALIBRATE", document.pinSensor,  document.stepCALIB);
+    console.log(document.pinSensor)
+    console.log(document.stepCALIB)
+    calibrate("CALIBRATE", document.pinSensor,  document.stepCALIB ? 1 : 0);
 }
 
 function endCalibration() {
@@ -15,7 +17,7 @@ function  displayCalibration(isLaunch){
     var iconCalibrate = document.getElementById("iconCalibrate");
     var endCalibrate = document.getElementById("endCalibration");
     var indicCalibButton = document.getElementById("indicCalibButton");
-    var indicationLabel = [["7.0 pH", "4.0 pH"], ["14.22 mS", "12.80 mS"], ["5°C", "25°C"]];
+    var indicationLabel = [["7.0 pH", "4.0 pH"], ["5°C", "25°C"], ["1413 uS", "12.88 mS"]];
 
     if (isLaunch) {
         iconCalibrate.style.display = "";
@@ -28,6 +30,7 @@ function  displayCalibration(isLaunch){
     if(document.stepCALIB) {
         endCalibrate.classList.remove("disabled");
     }
-
+    console.log(document.pinSensor);
+    console.log(indicationLabel[document.pinSensor][document.stepCALIB ? 1 : 0]);
     indicCalibButton.innerHTML = "Please put the sensor in the "+indicationLabel[document.pinSensor][document.stepCALIB ? 1 : 0]+" solution";
 }

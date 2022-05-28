@@ -12,6 +12,7 @@ function listener(page) {
         for(let buttonX of buttonCalibrateType) {
             buttonX.value = i;
             buttonX.addEventListener("click", function() {controlerPythonCALIB(buttonX.value)});
+            i++;
         }
     }
 
@@ -104,6 +105,7 @@ function controlerPythonRT() {
 }
 
 function controlerPythonCALIB(pinSensor) {
+    console.log(pinSensor);
     document.pinSensor = pinSensor;
     if(document.stepCALIB == undefined) {document.stepCALIB = 0}
     if(document.isLaunch == undefined) {document.isLaunch = false}

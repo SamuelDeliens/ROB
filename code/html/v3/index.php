@@ -40,7 +40,7 @@
                     <li class="nav-item"><a class="nav-link active" href="index.php"><i class="fa fa-feed"></i><span>Real Time</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="table.php"><i class="fas fa-table"></i><span>Donnee</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="stat.php"><i class="fas fa-tachometer-alt"></i><span>Statistique</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="camera.php"><i class="fas fa-camera-retro"></i><span>Camera</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="assets/php/launchCamera.php"><i class="fas fa-camera-retro"></i><span>Camera</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" data-bss-hover-animate="pulse" id="sidebarToggle" type="button"></button></div>
             </div>
@@ -53,7 +53,7 @@
                             <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ..."><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
                         </form>
                         <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto;" width="50px" height="50px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                            <svg style="margin: auto;" width="50px" height="50px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
                                 <g>
                                   <animateTransform attributeName="transform" type="rotate" values="360 50 50;0 50 50" keyTimes="0;1" dur="1.7543859649122806s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1" begin="-0.17543859649122806s"></animateTransform>
                                   <circle cx="50" cy="50" r="39.891" stroke="#6994b7" stroke-width="14.4" fill="none" stroke-dasharray="0 300">
@@ -333,8 +333,8 @@
                                 <h6>Calibration:</h6>
                             </div>
                             <div class="col"><a class="btn btn-light btn-sm calibrationType" role="button" data-bs-target="#Calibration" data-bs-toggle="modal" data-backdrop="static" data-keyboard="false" value=0>Calibrate</a></div>
-                            <div class="col"><a class="btn btn-light btn-sm calibrationType" role="button" data-bs-target="#Settings" data-bs-toggle="modal" data-backdrop="static" data-keyboard="false" value=1>Calibrate</a></div>
-                            <div class="col"><a class="btn btn-light btn-sm calibrationType" role="button" data-bs-target="#Settings" data-bs-toggle="modal" data-backdrop="static" data-keyboard="false" value=2>Calibrate</a></div>
+                            <div class="col"><a class="btn btn-light btn-sm calibrationType" role="button" data-bs-target="#Calibration" data-bs-toggle="modal" data-backdrop="static" data-keyboard="false" value=1>Calibrate</a></div>
+                            <div class="col"><a class="btn btn-light btn-sm calibrationType" role="button" data-bs-target="#Calibration" data-bs-toggle="modal" data-backdrop="static" data-keyboard="false" value=2>Calibrate</a></div>
                         </div>
                         <hr style="text-align: center;margin: 10px 20%;">
                     </div>

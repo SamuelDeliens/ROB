@@ -8,13 +8,8 @@ import datetime
 import pymysql.cursors
 
 class BDD:
-    """BDD object
-    manage the BDD table capteur
-    """
 
     def __init__(self):
-        """Constructor
-        """
         self.hostG = 'localhost'
         self.userG = 'root'
         self.passwordG = 'pi'
@@ -23,14 +18,6 @@ class BDD:
 # --------------------- Config -------------------------
 
     def configBDD(self, _host, _user, _password, _database):
-        """configuration of the BDD
-
-        Args:
-            _host (str): host of the user
-            _user (str): name of the user
-            _password (str): password to connect the user
-            _database (str): name of the database choosen
-        """
         self.hostG = _host
         self.userG = _user
         self.passwordG = _password
@@ -39,11 +26,6 @@ class BDD:
 # --------------------- Compo -------------------------
 
     def connectionBDD(self):
-        """connection to the BDD
-
-        Returns:
-            str: connecion to BDD to make request
-        """
         connection= pymysql.connect(
             host= self.hostG,
             user= self.userG,
@@ -53,14 +35,6 @@ class BDD:
         return connection
 
     def closeBDD(self, connection):
-        """close connection to BDD
-
-        Args:
-            connection (str): the connection already make
-
-        Returns:
-            str: connection end
-        """
         connection.commit()
         connection.close()
         return connection
@@ -68,8 +42,6 @@ class BDD:
 # --------------------- GET -------------------------
 
     def getBDD(self):
-        """get every data from the BDD
-        """
         connection = self.connectionBDD()
         with connection.cursor() as cursor:
             sql= "SELECT * FROM capteur"
@@ -81,11 +53,6 @@ class BDD:
 # --------------------- ADD -------------------------
 
     def inssertBDD(self, sortieA):
-        """insert data into BDD
-
-        Args:
-            sortieA (array): values of the sensors
-        """
         connection = self.connectionBDD()
         with connection.cursor() as cursor:
             sql= "INSERT INTO capteur (date,pH,oxygen,conductivity) VALUES (%s,%s,%s,%s)"
@@ -95,8 +62,6 @@ class BDD:
 # --------------------- DELETE ----------------------
 
     def deleteValue(self):
-        """delete data from the BDD
-        """
         connection = self.connectionBDD()
         with connection.cursor() as cursor:
             sql= "DELETE FROM capteur"

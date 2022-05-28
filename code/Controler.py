@@ -2,21 +2,15 @@
 # --------------------- ControlerServer ----------------
 # ------------------------------------------------------  
 
+import socket
+import time
+
 from FileControler import FileControler
 from Actioner import Actioner
 
 class Controler:
-    """Controler object
-        Determine what actions to take
-    """
 
     def __init__(self, client_, adressClient_):
-        """Constructor
-        
-        Args:
-            client_ (str): IP of client
-            adressClient_ (str): Port of client
-        """
         self.client = client_
         self.adressClient = adressClient_
 
@@ -24,8 +18,6 @@ class Controler:
 # ----------------- Config General ---------------------
 
     def initConfig(self):
-        """general configuration
-        """
         Actioner.sensor.configSensor(_average = 100.0)
         #self.servo.configServo(newCalibParam = {"port": 17, "mini_angle": 0, "maxi_angle": 180, "minPWM": 0.4/1000, "maxPWM": 2.4/1000})
 
@@ -33,11 +25,6 @@ class Controler:
 # --------------------- Listen -------------------------
 
     def listening(self):
-        """listen command sent by client
-        
-        Returns:
-            str: command
-        """
         command = self.client.recv(1024).decode()
         return command
     
@@ -45,14 +32,6 @@ class Controler:
 # --------------------- Send ---------------------------
 
     def sending(self, message):
-        """send command to client
-        
-        Args:
-            message (str): message send to client
-            
-        Returns:
-            str: Error
-        """
         self.client.send(message)
         n = self.client.send(message)
         if (n != len(message)):
@@ -62,14 +41,6 @@ class Controler:
 # --------------------- GETRT -----------------------
 
     def getRTcontroler(self,continu):
-        """controler to get data in Real Time
-        
-        Args:
-            continu (bool): permit to stop the RT
-            
-        Returns:
-            str: End
-        """
         while continu == True:
             print(continu)
             message = bytearray(str(Actioner.sensor.measures()), 'utf-8')
@@ -83,14 +54,6 @@ class Controler:
 # --------------------- Calibrate -----------------------
     
     def calibrate(self, command):
-        """Controler to calibrate the sensor
-        
-        Args:
-            command (str): type and step for the calibration
-            
-        Returns:
-            str: calibration progress
-        """
         if (command[0]== 0):
             isCalibrate = Actioner.sensor.calibratePH(command[1])
         elif (command[0]== 1):
@@ -103,14 +66,6 @@ class Controler:
 # --------------------- Servo -----------------------
 
     def servoControler(self, command):
-        """Controler to servomotor
-        
-        Args:
-            command (str): type and angle for rotate servomotor
-            
-        Returns:
-            str: End
-        """
         if (command[0]== "direct"):
             print("direct")
             Actioner.servo.rotateDirect(command[1])
@@ -126,14 +81,6 @@ class Controler:
 # --------------------- Camera -----------------------
 
     def cameraControler(self, command):
-        """Controler to camera
-
-        Args:
-            command (str): type and action to start and stop the camera
-
-        Returns:
-            str: Done
-        """
         if (command == "launch" and FileControler.readFile()["camera"]["status"] == "stop"):
             print("launch")
             FileControler.writePartPartFile("camera", "status", "continu")
@@ -147,14 +94,6 @@ class Controler:
 # --------------------- Controler -----------------------
     
     def controlerCommand(self, command):
-        """General controler
-        
-        Args:
-            command (str): Full command
-            
-        Returns:
-            str: progress
-        """
         print("controler")
         
         #-------------GETRT------------

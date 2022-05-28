@@ -74,5 +74,4 @@ function deconnection() {
     session_destroy();
 }
 
-//{0:i, 1:"13/12/07 18:19:11", 2:7.1, 3: 1.2, 4: 3.1, 5: null, id:i, date:"13/12/07 18:19:11", pH:7.1, oxygen: 1.2, conductivity: 3.1, turbidifty: null}
 ?>

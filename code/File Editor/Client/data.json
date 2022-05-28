@@ -1,5 +1,8 @@
 {
       "GETRT": {
             "status": "stop"
+      },
+      "CAMERA": {
+            "status": "continu"
       }
 }
