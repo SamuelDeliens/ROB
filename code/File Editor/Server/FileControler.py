@@ -1,7 +1,7 @@
 import json
 
 class FileControler :
-    pathFile = "data.json"
+    pathFile = "/home/pi/Desktop/ROB/Server/data.json"
 
 
 #-----------------controler----------------------

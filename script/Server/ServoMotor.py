@@ -17,7 +17,7 @@ class ServoMotor :
         """Constructor
         define servo with default parameter
         """
-        self.calibParam = {"port": 26, "mini_angle": 0, "maxi_angle": 180, "minPWM": 0.4/1000, "maxPWM": 2.4/1000}
+        self.calibParam = {"port": 12, "mini_angle": 0, "maxi_angle": 180, "minPWM": 0.4/1000, "maxPWM": 2.4/1000}
         self.angle = float(FileControler.readFile()["servo"]["angle"])
         self.speed = float(FileControler.readFile()["servo"]["speed"])
         self.servo = AngularServo(self.calibParam["port"], min_angle=self.calibParam["mini_angle"], max_angle=self.calibParam["maxi_angle"], min_pulse_width=self.calibParam["minPWM"], max_pulse_width=self.calibParam["maxPWM"])
@@ -28,7 +28,7 @@ class ServoMotor :
 
     def configServo(self, newCalibParam):
         """configure the servomotor
-
+        
         Args:
             newCalibParam (dict): new calibration parameter
         """
@@ -40,7 +40,7 @@ class ServoMotor :
         
     def rotateDirect(self, angle):
         """direct rotation with angle
-
+        
         Args:
             angle (int): new angle of the servo
         """
@@ -54,7 +54,7 @@ class ServoMotor :
         
     def rotateSlow(self, angle):
         """slow rotation with direction angle
-
+        
         Args:
             angle (int): direction of the rotation
         """

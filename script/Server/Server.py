@@ -21,7 +21,7 @@ class Server:
 
     def configServer(self, adress, port):
         """configuration of the server
-
+        
         Args:
             adress (str): ip adress of the connection
             port (str): port adress of the connection
@@ -40,7 +40,7 @@ class Server:
 
     def closeServer(self):
         """close the connection
-
+        
         Returns:
             str: END CONNECTION
         """
@@ -62,7 +62,7 @@ class Server:
                 threadClient = ThreadClient(self.client, self.adressClient)
                 threadClient.start()
                 self.listThreads.append(threadClient)
-  
+            
             for threadX in self.listThreads:
                 threadX.join()
         self.client.close()

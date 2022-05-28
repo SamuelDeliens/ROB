@@ -12,7 +12,7 @@ class Sensor:
     def __init__(self):
         self.average = 100.0
         self.temperature= 25.0
-        self.configPoint = {"pH": {"neutralVoltage": 1500.0,"acidVoltage": 2032.44},"oxygen": {"oxyvaluelow": 1300,"oxyvalueHigh": 1600},"conductivity": {"kvaluelow": 1.0,"kvalueHigh": 1.0}}
+        self.configPoint = {"pH": {"neutralVoltage": 1500.0,"acidVoltage": 2032.44}, "oxygen": {"oxyvaluelow": 1300,"oxyvalueHigh": 1600},"conductivity": {"kvaluelow": 1.0,"kvalueHigh": 1.0}}
         self.kvalue= 1.0
         self.oxygenTable = [14460, 14220, 13820, 13440, 13090, 12740, 12420, 12110, 11010, 11530, 11260, 11010, 10770, 10530, 10300, 10080, 9860, 9660, 9460, 9270, 9080, 8900, 8730, 8570, 8410, 8250, 8110, 7960, 7820, 7690, 7560, 7430, 7300, 7180, 7070, 6950, 6840, 6730, 6630, 6530, 6410]
         self.adc = MCP3008()
@@ -23,7 +23,7 @@ class Sensor:
 
     def configSensor(self, _average):
         self.average = _average
-        self.configPoint = FileControler.readFile()
+        self.configPoint = FileControler.readFile()["sensor"]
 
 # --------------------- Compo -------------------------
 
@@ -51,21 +51,24 @@ class Sensor:
         i=0
         while i<5 :
             time.sleep(0.5)
-            newMValue = self.doAverage(0)
-            if (abs(round(mValue, 2) - round(newMValue, 2)) < 0.1):
+            newMValue = self.doAverage(pin)
+            print(abs(round(mValue, 1) - round(newMValue, 1)))
+            if (abs(round(mValue, 1) - round(newMValue, 1)) < 1):
                 i=i+1
             else:
                 i=0
                 mValue = newMValue
         return mValue
-    
+         
     def calibratePH(self, step):
         mValue = self.waitStabilisation(0)
         voltage = mValue / 1023.0 *3.3
         if (step == 0):
-            self.neutralVoltage = voltage 
+            print(self.configPoint["pH"]["neutralVoltage"])
+            self.configPoint["pH"]["neutralVoltage"] = voltage 
         else:
-            self.acidVoltage = voltage
+            print(self.configPoint["pH"]["acidVoltage"])
+            self.configPoint["pH"]["acidVoltage"] = voltage
         FileControler.writePartFile("sensor", self.configPoint)
         return "Done"
     
@@ -116,7 +119,7 @@ class Sensor:
 #convert Oxygen
     def convertOxygen(self, voltage):
         saturation = (self.temperature - 15) * (self.configPoint["oxygen"]["oxyvalueHigh"] - self.configPoint["oxygen"]["oxyvaluelow"]) / (25 - 15) + self.configPoint["oxygen"]["oxyvaluelow"]
-        value = voltage * self.oxygenTable[self.temperature] / saturation
+        value = voltage * self.oxygenTable[round(self.temperature)] / saturation
         return value
 
 

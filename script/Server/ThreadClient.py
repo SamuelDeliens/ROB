@@ -1,4 +1,7 @@
-import socket
+#------------------------------------------------------
+#----------------------- Thread -----------------------
+#------------------------------------------------------
+
 from threading import Thread
 from socketserver import ThreadingMixIn
 
@@ -7,14 +10,14 @@ from Controler import Controler
 class ThreadClient(Thread):
     """Thread of one client
     manage the connection with one client
-
+    
     Args:
         Thread (Thread): Thread of client
     """
-
+    
     def __init__(self, client_, adressClient_):
         """Constructor
-
+        
         Args:
             client_ (str): IP of connection
             adressClient_ (str): port of connection
@@ -29,7 +32,7 @@ class ThreadClient(Thread):
 
     def listening(self):
         """listen for command
-
+        
         Returns:
             str: command receave
         """
@@ -41,10 +44,10 @@ class ThreadClient(Thread):
 
     def sending(self, message):
         """send message
-
+        
         Args:
             message (str): message to send
-
+            
         Returns:
             str: Error
         """

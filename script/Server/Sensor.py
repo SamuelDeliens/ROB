@@ -11,6 +11,7 @@ class Sensor:
     """object sensors 
     get the sensor values
     """
+    
     def __init__(self):
         """Contructor
         define sensor with default parameter
@@ -28,7 +29,7 @@ class Sensor:
 
     def configSensor(self, _average):
         """configure the sensor
-
+        
         Args:
             _average (int): number of value get before to average
         """
@@ -40,10 +41,10 @@ class Sensor:
 #Get average value
     def doAverage(self, pin):
         """get multiple value to average
-
+        
         Args:
             pin (int): which sensor to get value
-
+            
         Returns:
             int: value get by the sensor
         """
@@ -57,10 +58,10 @@ class Sensor:
 #get measures
     def measureVoltage(self, outA):
         """transform sensor value to voltage
-
+        
         Args:
             outA (array): array of voltage value of sensors
-
+            
         Returns:
             array: same array with voltage value
         """
@@ -74,10 +75,10 @@ class Sensor:
     
     def waitStabilisation(self, pin):
         """calibrate function to wait till the value is stable
-
+        
         Args:
             pin (int): pin of the sensor calibrate
-
+            
         Returns:
             int: value of the calibration
         """
@@ -85,38 +86,41 @@ class Sensor:
         i=0
         while i<5 :
             time.sleep(0.5)
-            newMValue = self.doAverage(0)
-            if (abs(round(mValue, 2) - round(newMValue, 2)) < 0.1):
+            newMValue = self.doAverage(pin)
+            print(abs(round(mValue, 1) - round(newMValue, 1)))
+            if (abs(round(mValue, 1) - round(newMValue, 1)) < 1):
                 i=i+1
             else:
                 i=0
                 mValue = newMValue
         return mValue
-    
+         
     def calibratePH(self, step):
         """calibration of the pH sensor
-
+        
         Args:
             step (int): step of the calibration (1 or 2)
-
+            
         Returns:
             str: Done
         """
         mValue = self.waitStabilisation(0)
         voltage = mValue / 1023.0 *3.3
         if (step == 0):
-            self.neutralVoltage = voltage 
+            print(self.configPoint["pH"]["neutralVoltage"])
+            self.configPoint["pH"]["neutralVoltage"] = voltage 
         else:
-            self.acidVoltage = voltage
+            print(self.configPoint["pH"]["acidVoltage"])
+            self.configPoint["pH"]["acidVoltage"] = voltage
         FileControler.writePartFile("sensor", self.configPoint)
         return "Done"
     
     def calibrateOxygen(self, step):
         """calibration of the oxygen sensor
-
+        
         Args:
             step (int): step of the calibration (1 or 2)
-
+            
         Returns:
             str: Done
         """
@@ -131,10 +135,10 @@ class Sensor:
              
     def calibrateConductivity(self, step):
         """calibration of the conductivity sensor
-
+        
         Args:
             step (int): step of the calibration (1 or 2)
-
+            
         Returns:
             str: Done
         """
@@ -155,10 +159,10 @@ class Sensor:
 #convert ph
     def convertPH(self, voltage):
         """conversion voltage to pH
-
+        
         Args:
             voltage (int): voltage value of the sensor
-
+            
         Returns:
             int: return the pH value
         """
@@ -170,10 +174,10 @@ class Sensor:
 #convert Conductivity
     def convertConductivity(self, voltage):
         """conversion voltage to ms
-
+        
         Args:
             voltage (int): voltage value of the sensor
-
+            
         Returns:
             int: return the conductivity value
         """
@@ -190,10 +194,10 @@ class Sensor:
 #convert Oxygen
     def convertOxygen(self, voltage):
         """conversion voltage to oxygen
-
+        
         Args:
             voltage (int): voltage value of the sensor
-
+            
         Returns:
             int: return the oxygen value
         """
@@ -205,10 +209,10 @@ class Sensor:
 #convert Analogique to Numerique
     def convert(self, outA):
         """conversion of the three value
-
+        
         Args:
             outA (array): array of voltage values
-
+            
         Returns:
             array: array of convert values
         """
@@ -222,7 +226,7 @@ class Sensor:
 
     def measures(self):
         """get value of the sensors
-
+        
         Returns:
             array: each value of sensors
         """

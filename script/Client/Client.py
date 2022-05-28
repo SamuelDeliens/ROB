@@ -4,9 +4,6 @@
 
 import socket
 import time
-import datetime
-
-import pymysql.cursors
 
 from BDD import BDD
 from FileControler import FileControler
@@ -83,7 +80,7 @@ class Client:
             donnees = self.receive()
             time.sleep(0.5) #delay insertion pour Interface
             self.BDD.inssertBDD(donnees)
-            status = self.fileControler.readFile()
+            self.status = self.fileControler.readFile()
             if(self.status["GETRT"]["status"] == "continu"):
                 self.sendMsg('continu')
         self.sendMsg('stop')
@@ -99,6 +96,11 @@ class Client:
     def servo(self):
         isMove = self.client.recv(1024).decode()
         print(isMove)
+
+#----------------------- Execution Sensor-----------------------
+    
+    def camera(self):
+        print("Done")
     
 #----------------------- Controler -----------------------
         
@@ -110,7 +112,9 @@ class Client:
         elif("CALIBRATE" in message):
             self.calibrate()
         elif("SERVO" in message):
-            self.servo() 
+            self.servo()
+        elif("CAMERA" in message):
+            self.camera()
 
     def execute(self, message):
         self.connection()
